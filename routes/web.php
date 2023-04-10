@@ -47,3 +47,13 @@ Route::get('/contact', function () {
 Route::get('/team', function () {
     return view('team');
 });
+
+// Sign In Page
+Route::get('/login', function () {
+    return view('SignIn');
+});
+
+// Sign Up Page
+Route::get('/Reg', function () {
+    return view('signUp');
+});
