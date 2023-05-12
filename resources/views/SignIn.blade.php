@@ -1,34 +1,77 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>Sports Team</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Sports Team template project">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">
-    <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.3.4/owl.carousel.css">
-    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.3.4/owl.theme.default.css">
-    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.3.4/animate.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form by Colorlib</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
-    <!--Trigger-->
-    <a class="login-trigger" href="#" data-target="#login" data-toggle="modal">Login</a>
 
-    <div id="login" class="modal fade" role="dialog">
-        <div class="modal-dialog">
+    <div class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-*-*">
+                    <!-- Sing in  Form -->
+                    <section class="sign-in">
+                        <div class="container">
+                            <div class="signin-content">
+                                <div class="signin-image">
+                                    <figure><img src="images/logo.png" alt=""></figure>
+                                    <a href="{{ url('/Reg') }}" class="signup-image-link">Create an account</a>
+                                </div>
 
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button data-dismiss="modal" class="close">&times;</button>
-                    <h4>Login</h4>
-                    <form>
-                        <input type="text" name="username" class="username form-control" placeholder="Username" />
-                        <input type="password" name="password" class="password form-control" placeholder="password" />
-                        <input class="btn login" type="submit" value="Login" />
-                    </form>
+                                <div class="signin-form">
+                                    <h2 class="form-title">Sign In</h2>
+                                    <form method="POST" class="register-form" id="login-form">
+                                        <div class="form-group">
+                                            <label for="your_name"><i
+                                                    class="zmdi zmdi-account material-icons-name"></i></label>
+                                            <input type="text" name="your_name" id="your_name"
+                                                placeholder="Your Name" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                                            <input type="password" name="your_pass" id="your_pass"
+                                                placeholder="Password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" name="remember-me" id="remember-me"
+                                                class="agree-term" />
+                                            <label for="remember-me"
+                                                class="label-agree-term"><span><span></span></span>Remember
+                                                me</label>
+                                        </div>
+                                        <div class="form-group form-button">
+                                            <input type="submit" name="signin" id="signin" class="form-submit"
+                                                value="Log in" />
+                                        </div>
+                                    </form>
+                                    <div class="social-login">
+                                        <span class="social-label">Or login with</span>
+                                        <ul class="socials">
+                                            <li><a href="#"><i
+                                                        class="display-flex-center zmdi zmdi-facebook"></i></a></li>
+                                            <li><a href="#"><i
+                                                        class="display-flex-center zmdi zmdi-twitter"></i></a></li>
+                                            <li><a href="#"><i
+                                                        class="display-flex-center zmdi zmdi-google"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
                 </div>
             </div>
         </div>
@@ -36,84 +79,3 @@
 </body>
 
 </html>
-
-{{-- CSS --}}
-<style>
-    body {
-        height: 100vh;
-        text-align: center;
-    }
-
-    /*Trigger Button*/
-    .login-trigger {
-        font-weight: bold;
-        color: #fff;
-        background: linear-gradient(to bottom right, #B05574, #F87E7B);
-        padding: 15px 30px;
-        border-radius: 30px;
-        position: relative;
-        top: 50%;
-    }
-
-    /*Modal*/
-    h4 {
-        font-weight: bold;
-        color: #fff;
-    }
-
-    .close {
-        color: #fff;
-        transform: scale(1.2)
-    }
-
-    .modal-content {
-        font-weight: bold;
-        background: linear-gradient(to bottom right, #F87E7B, #B05574);
-    }
-
-    .form-control {
-        margin: 1em 0;
-    }
-
-    .form-control:hover,
-    .form-control:focus {
-        box-shadow: none;
-        border-color: #fff;
-    }
-
-    .username,
-    .password {
-        border: none;
-        border-radius: 0;
-        box-shadow: none;
-        border-bottom: 2px solid #eee;
-        padding-left: 0;
-        font-weight: normal;
-        background: transparent;
-    }
-
-    .form-control::-webkit-input-placeholder {
-        color: #eee;
-    }
-
-    .form-control:focus::-webkit-input-placeholder {
-        font-weight: bold;
-        color: #fff;
-    }
-
-    .login {
-        padding: 6px 20px;
-        border-radius: 20px;
-        background: none;
-        border: 2px solid #FAB87F;
-        color: #FAB87F;
-        font-weight: bold;
-        transition: all .5s;
-        margin-top: 1em;
-    }
-
-    .login:hover {
-        background: #FAB87F;
-        color: #fff;
-    }
-</style>

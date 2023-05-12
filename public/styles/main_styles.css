@@ -112,10 +112,7 @@ a:hover
 	background: rgba(255, 165, 75, 1);
 	color: #FFFFFF;
 }
-p::selection
-{
-	
-}
+
 h1{font-size: 48px;}
 h2{font-size: 36px;}
 h3{font-size: 24px;}
@@ -129,15 +126,7 @@ h1, h2, h3, h4, h5, h6
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	line-height: 1.2;
 }
-h1::selection, 
-h2::selection, 
-h3::selection, 
-h4::selection, 
-h5::selection, 
-h6::selection
-{
-	
-}
+
 img
 {
 	max-width: 100%;
@@ -863,13 +852,13 @@ section
 	letter-spacing: -3px;
 	font-weight: 900;
 	line-height: 0.75;
-	/*text-shadow: 
+	/*text-shadow:
 	-3px -3px 0 #191339,
 	3px -3px 0 #191339,
 	-3px 3px 0 #191339,
 	3px 3px 0 #191339;*/
 	-webkit-text-stroke: 3px #191339;
-	text-stroke: 3px #191339;
+	text-shadow: 3px #191339;
     color: #d80033;
 }
 .zoomInDown
@@ -1006,10 +995,10 @@ section
 {
 	padding-left: 31px;
 }
-.result_content
+/* .result_content
 {
-	
-}
+
+} */
 .result_content > div
 {
 	width: 50%;
@@ -1627,9 +1616,9 @@ section
 	font-size: 12px !important;
 	font-weight: 500 !important;
 	color: #d7d9e5 !important;
-} 
+}
 .newsletter_input:-ms-input-placeholder
-{ 
+{
 	font-size: 12px !important;
 	font-weight: 500 !important;
 	color: #d7d9e5 !important;
