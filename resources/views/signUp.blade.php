@@ -13,7 +13,6 @@
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.3.4/animate.css">
 
     <!-- Font Icon -->
-    {{-- <link rel="stylesheet" href="styles/material-design-iconic-font.min.css"> --}}
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
 

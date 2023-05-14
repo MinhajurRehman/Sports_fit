@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\member_controller;
+use App\Http\Controllers\latestgame;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,34 +19,14 @@ Route::get('/', function () {
     return view('index');
 });
 
-// Index 2 Page
-Route::get('/index-2', function () {
-    return view('index-2');
-});
-
-// about page
-Route::get('/about', function () {
-    return view('about');
-});
-
-// about-2 page
-Route::get('/about-2', function () {
-    return view('about-2');
-});
-
-// Blog page
-Route::get('/blog', function () {
-    return view('blog');
-});
-
 // contact page
 Route::get('/contact', function () {
     return view('contact');
 });
 
-// team page
-Route::get('/team', function () {
-    return view('team');
+// ticket page
+Route::get('/tickets', function () {
+    return view('Tickets');
 });
 
 // Sign In Page
@@ -57,3 +38,38 @@ Route::get('/login', function () {
 Route::get('/Reg', function () {
     return view('signUp');
 });
+
+
+// Admin Dashboard
+Route::get('/Admin/Dashboard', function () {
+    return view('Admins.Dashboard');
+});
+
+// Admin Tables
+Route::get('/Admin/Tables', function () {
+    return view('Admins.Tables');
+});
+
+//Membership Routes
+Route::get('folder/read', [member_controller::class, 'readproject']);
+Route::get('folder/create', [member_controller::class, 'create'])->name('folder.create');
+Route::post('folder/create', [member_controller::class, 'store']);
+//Go to View page and delete data
+Route::get('/member/del/{id}', [member_controller::class, 'delete'])->name('member.delete');
+//Go to View page and Edit data
+Route::get('/member/edit/{id}', [member_controller::class, 'edit'])->name('member.edit');
+//After Edit data that update in database and view page using post method
+Route::POST('/member/update/{id}', [member_controller::class, 'update'])->name('member.update');
+//Membership routes close
+
+//latest games Routes
+Route::get('latestgames/show', [latestgame::class, 'readproject']);
+Route::get('latestgames/get', [latestgame::class, 'create'])->name('latestgames.get');
+Route::post('latestgames/get', [latestgame::class, 'store']);
+// Go to View page and delete data
+Route::get('/latestgames/del/{id}', [latestgame::class, 'delete'])->name('latestgames.delete');
+//Go to View page and Edit data
+Route::get('/latestgames/edit/{id}', [latestgame::class, 'edit'])->name('latestgames.edit');
+//After Edit data that update in database and view page using post method
+Route::POST('/latestgames/update/{id}', [latestgame::class, 'update'])->name('latestgames.update');
+// latest games routes close

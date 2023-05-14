@@ -46,7 +46,7 @@
                                                 </a>
                                             </div>
                                             <ul class="d-flex flex-row align-items-start justify-content-end">
-                                                <li class="active"><a href="{{ url('/index-2') }}">home</a></li>
+                                                <li class="active"><a href="{{ url('/') }}">home</a></li>
                                                 <li><a href="#about-section">about the club</a></li>
                                                 <li><a href="#join">join-club</a></li>
                                             </ul>
@@ -57,7 +57,7 @@
                                         </div>
                                         <div>
                                             <ul class="d-flex flex-row align-items-start justify-content-start">
-                                                <li><a href="#">tickets</a></li>
+                                                <li><a href="{{ url('/tickets') }}">tickets</a></li>
                                                 <li><a href="#latest-news">news</a></li>
                                                 <li><a href="{{ url('/contact') }}">contact</a></li>
                                             </ul>
