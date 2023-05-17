@@ -45,10 +45,6 @@ Route::get('/Admin/Dashboard', function () {
     return view('Admins.Dashboard');
 });
 
-// Admin Tables
-Route::get('/Admin/Tables', function () {
-    return view('Admins.Tables');
-});
 
 //Membership Routes
 Route::get('folder/read', [member_controller::class, 'readproject']);
