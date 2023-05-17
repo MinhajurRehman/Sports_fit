@@ -12,10 +12,10 @@ class member_controller extends Controller
     public function create()
     {
         $members = new member;   // variable define
-        $url = url('/folder/create');
+        $url = url('/membership-form');
         $title = "Register membership Details";
         $data = compact('url', 'title', 'members');
-        return view('Admins.folder.create')->with($data);
+        return view('create')->with($data);
     }
 
     public function store(Request $request)
@@ -58,10 +58,10 @@ class member_controller extends Controller
             return redirect('folder/create');
         } else {
             //found
-            $title = "Update membership Details";
+            $title = "Update membership-form";
             $url = url('/member/update') . "/" . $id;
             $data = compact('members', 'url', 'title');
-            return view('Admins.folder.create')->with($data);
+            return view('create')->with($data);
         }
     }
 

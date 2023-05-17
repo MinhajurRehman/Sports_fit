@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\member_controller;
 use App\Http\Controllers\latestgame;
+use App\Http\Controllers\Store;
+use App\Http\Controllers\upcomming;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,17 +31,6 @@ Route::get('/contact', function () {
 Route::get('/tickets', function () {
     return view('Tickets');
 });
-
-// Sign In Page
-Route::get('/login', function () {
-    return view('SignIn');
-});
-
-// Sign Up Page
-Route::get('/Reg', function () {
-    return view('signUp');
-});
-
 
 // Admin Dashboard
 Route::get('/Admin/Dashboard', function () {
@@ -69,3 +61,23 @@ Route::get('/latestgames/edit/{id}', [latestgame::class, 'edit'])->name('latestg
 //After Edit data that update in database and view page using post method
 Route::POST('/latestgames/update/{id}', [latestgame::class, 'update'])->name('latestgames.update');
 // latest games routes close
+
+
+//upcoming events Routes
+Route::get('upcomingevents/show', [upcomming::class, 'readproject']);
+Route::get('upcomingevents/get', [upcomming::class, 'create'])->name('upcomming.get');
+Route::POST('upcomingevents/get', [upcomming::class, 'store']);
+// Go to View page and delete data
+Route::get('/upcomingevents/del/{id}', [upcomming::class, 'delete'])->name('upcomming.delete');
+//Go to View page and Edit data
+Route::get('/upcomingevents/edit/{id}', [upcomming::class, 'edit'])->name('upcomming.edit');
+//After Edit data that update in database and view page using post method
+Route::POST('/upcomingevents/update/{id}', [upcomming::class, 'update'])->name('upcomming.update');
+// upcoming events routes close
+
+//Store Routing
+
+Route::get('/login', [Store::class, 'login']);
+Route::get('/Reg', [Store::class, 'Register']);
+Route::get('/int', [Store::class, 'interface']);
+Route::get('/info', [Store::class, 'information']);
