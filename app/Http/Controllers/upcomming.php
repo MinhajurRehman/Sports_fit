@@ -21,10 +21,11 @@ class upcomming extends Controller
     public function store(Request $request)
     {
         $img = $request->file('img')->GetClientOriginalName();
+        $path = $request->file('img')->storeAs('/img', $img);
         //move uploaded file
         $request->img->move(public_path('img'), $img);
         $upcoming_events = new up;
-        $upcoming_events->img = $request['img'];
+        $upcoming_events->img = $path;
         $upcoming_events->eventtitle = $request['eventtitle'];
         $upcoming_events->eventdate = $request['eventdate'];
         $upcoming_events->save();

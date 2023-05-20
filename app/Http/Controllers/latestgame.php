@@ -19,14 +19,18 @@ class latestgame extends Controller
 
     public function store(Request $request)
     {
-        $img_1 = $request->file('img_1')->GetClientOriginalName();
-        $img_2 = $request->file('img_2')->GetClientOriginalName();
+        $img1 = $request->file('img_1')->GetClientOriginalName();
+        $path = $request->file('img_1')->storeAs('/img_1', $img1);
+        $img2 = $request->file('img_2')->GetClientOriginalName();
+        $path2 = $request->file('img_2')->storeAs('/img_2', $img2);
         //move uploaded file
-        $request->img_1->move(public_path('img_1'), $img_1);
-        $request->img_2->move(public_path('img_2'), $img_2);
+        $request->img_1->move(public_path('img_1'), $img1);
+
+        $request->img_2->move(public_path('img_2'), $img2);
+
         $latest_games = new latestgames;
-        $latest_games->img_1 = $request['img_1'];
-        $latest_games->img_2 = $request['img_2'];
+        $latest_games->img_1 = $path;
+        $latest_games->img_2 = $path2;
         $latest_games->team1title = $request['team1title'];
         $latest_games->team1score = $request['team1score'];
         $latest_games->matchtitle = $request['matchtitle'];

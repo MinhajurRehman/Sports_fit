@@ -5,7 +5,7 @@
 
 
 <head>
-    <title>Sports Team</title>
+    <title>Sports Fit</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Sports Team template project">
@@ -83,7 +83,8 @@
                                     class="header_bar_content d-flex flex-row align-items-center justify-content-start">
                                     <div class="header_links">
                                         <ul class="d-flex flex-row align-items-start justify-content-start">
-                                            <li><a href="#"><i class="fa fa-ticket" aria-hidden="true"></i> GET
+                                            <li><a href="{{ url('/tickets') }}"><i class="fa fa-ticket"
+                                                        aria-hidden="true"></i> GET
                                                     Tickets</a></li>
                                             <li><a href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                                     Store </a>
@@ -137,7 +138,7 @@
                     </nav>
                     <div class="menu_links">
                         <ul class="d-flex flex-row align-items-start justify-content-start">
-                            <li><a href="#"><i class="fa fa-ticket" aria-hidden="true"></i> GET
+                            <li><a href="{{ url('/tickets') }}"><i class="fa fa-ticket" aria-hidden="true"></i> GET
                                     Tickets</a></li>
                             <li><a href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                     Store </a>

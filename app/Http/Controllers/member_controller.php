@@ -21,10 +21,12 @@ class member_controller extends Controller
     public function store(Request $request)
     {
         $members = new member;
+        $members->plan = $request['plan'];
         $members->name = $request['name'];
         $members->address = $request['address'];
         $members->contact = $request['contact'];
         $members->payment_method = $request['payment_method'];
+        $members->pay = $request['pay'];
         $members->save();
 
         return redirect('folder/read');
@@ -51,23 +53,25 @@ class member_controller extends Controller
         $members = member::find($id);
         if (is_null($members)) {
             //not found
-            return redirect('folder/create');
+            return redirect('/membership');
         } else {
             //found
-            $title = "Update membership-form";
+            $title = "Update Club members Details";
             $url = url('/member/update') . "/" . $id;
             $data = compact('members', 'url', 'title');
-            return view('crte')->with($data);
+            return view('Admins/folder/create')->with($data);
         }
     }
 
     public function update($id, Request $request)
     {
         $members = member::find($id);
+        $members->plan = $request['plan'];
         $members->name = $request['name'];
         $members->address = $request['address'];
         $members->contact = $request['contact'];
         $members->payment_method = $request['payment_method'];
+        $members->pay = $request['pay'];
         $members->save();
 
         return redirect('folder/read');

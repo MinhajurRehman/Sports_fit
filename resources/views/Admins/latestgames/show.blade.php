@@ -40,12 +40,12 @@
                 {{-- tr = table row --}}
                 <tr>
                     {{-- td = Table data --}}
-                    <td><img src="{{ $latestgames->img_1 }}"></td>
+                    <td><img src="{{ asset($latestgames->img_1) }}" height="30px"></td>
                     <td>{{ $latestgames->team1title }}</td>
                     <td>{{ $latestgames->team1score }}</td>
                     <td>{{ $latestgames->matchtitle }}</td>
                     <td>{{ $latestgames->matchdate }}</td>
-                    <td><img src="{{ $latestgames->img_2 }}"></td>
+                    <td><img src="{{ asset($latestgames->img_2) }}" height="30px"></td>
                     <td>{{ $latestgames->team2title }}</td>
                     <td>{{ $latestgames->team2score }}</td>
                     <td>

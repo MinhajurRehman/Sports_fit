@@ -25,12 +25,15 @@
                                 adipiscing elit.</p>
                         </div>
                         <div class="contact_form_container">
-                            <form action="#" class="contact_form" id="contact_form">
-                                <input type="text" class="contact_input" placeholder="Name" required="required">
-                                <input type="email" class="contact_input" placeholder="Mail" required="required">
-                                <input type="text" class="contact_input" placeholder="Subject">
-                                <textarea class="contact_input contact_textarea" placeholder="Message" required="required"></textarea>
-                                <button class="contact_button button"><a href="#">Send Message</a></button>
+                            <form method="post" class="contact_form" id="contact_form">
+                                @csrf
+                                <input type="text" name="name" class="contact_input" placeholder="Name"
+                                    required="required">
+                                <input type="email" name="email" class="contact_input" placeholder="Mail"
+                                    required="required">
+                                <input type="text" name="subject" class="contact_input" placeholder="Subject">
+                                <textarea class="contact_input contact_textarea" name="textarea" placeholder="Message" required="required"></textarea>
+                                <input type="submit" class="btn btn-primary">
                             </form>
                         </div>
                     </div>

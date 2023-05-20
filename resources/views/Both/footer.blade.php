@@ -3,10 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 order-lg-1 order-3">
-                    <div
-                        class="footer_image d-flex flex-column align-items-lg-start align-items-center justify-content-end">
-                        <div><img src="{{ url('Admins/images/logos.png') }}" alt=""></div>
-                    </div>
+                    {{-- Working in Div --}}
                 </div>
                 <div class="col-lg-3 order-lg-2 order-1">
                     <div class="footer_contact_info">
@@ -15,17 +12,16 @@
                             <ul>
                                 <li class="d-flex flex-row align-items-start justify-content-start">
                                     <div>Address</div>
-                                    <div>245 Principe Lane Avila Beach, USA</div>
+                                    <div>Comsats University Islamabad, Wah campus</div>
                                 </li>
                                 <li class="d-flex flex-row align-items-start justify-content-start">
                                     <div>Phone</div>
-                                    <div>+36 345 7953 4994</div>
+                                    <div>+92 316 8928620</div>
                                 </li>
                                 <li class="d-flex flex-row align-items-start justify-content-start">
                                     <div>E-mail</div>
-                                    <div><a href="https://preview.colorlib.com/cdn-cgi/l/email-protection"
-                                            class="__cf_email__"
-                                            data-cfemail="afd6c0daddc2cec6c3efc8c2cec6c381ccc0c2">[email&#160;protected]</a>
+                                    <div><a
+                                            href="https://www.linkedin.com/in/minhaj-ur-rehman-21502417a/">[email&#160;protected]</a>
                                     </div>
                                 </li>
                             </ul>

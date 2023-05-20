@@ -35,7 +35,7 @@
                 {{-- tr = table row --}}
                 <tr>
                     {{-- td = Table data --}}
-                    <td><img src="{{ $upcomming->img }}"></td>
+                    <td><img src="{{ asset($upcomming->img) }}" height="30px"></td>
                     <td>{{ $upcomming->eventtitle }}</td>
                     <td>{{ $upcomming->eventdate }}</td>
                     <td>

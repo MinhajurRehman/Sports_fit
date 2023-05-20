@@ -1,10 +1,13 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\contact;
+use App\Http\Controllers\index;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\member_controller;
 use App\Http\Controllers\latestgame;
 use App\Http\Controllers\Store;
+use App\Http\Controllers\ticketes;
 use App\Http\Controllers\upcomming;
 
 /*
@@ -35,9 +38,17 @@ Route::get('/tickets', function () {
     return view('Tickets');
 });
 
+// ticket page Data store & Send Via Email
+Route::post('/tickets', [ticketes::class, 'store']);
+
+//Contact page store Data & Send Via Email
+Route::post('/contact', [contact::class, 'store']);
+
 // Admin Dashboard
 Route::get('/Admins/Dashboard', [AdminController::class, 'Dashboard']);
 
+//fetch layout index data from database
+Route::get('/', [index::class, 'Dashboard']);
 
 //Membership Routes
 Route::get('folder/read', [member_controller::class, 'readproject']);
@@ -49,7 +60,7 @@ Route::get('/member/del/{id}', [member_controller::class, 'delete'])->name('memb
 Route::get('/member/edit/{id}', [member_controller::class, 'edit'])->name('member.edit');
 //After Edit data that update in database and view page using post method
 Route::POST('/member/update/{id}', [member_controller::class, 'update'])->name('member.update');
-//Membership routes close
+
 
 //latest games Routes
 Route::get('latestgames/show', [latestgame::class, 'readproject']);
@@ -61,7 +72,7 @@ Route::get('/latestgames/del/{id}', [latestgame::class, 'delete'])->name('latest
 Route::get('/latestgames/edit/{id}', [latestgame::class, 'edit'])->name('latestgames.edit');
 //After Edit data that update in database and view page using post method
 Route::POST('/latestgames/update/{id}', [latestgame::class, 'update'])->name('latestgames.update');
-// latest games routes close
+
 
 
 //upcoming events Routes
@@ -74,7 +85,7 @@ Route::get('/upcomingevents/del/{id}', [upcomming::class, 'delete'])->name('upco
 Route::get('/upcomingevents/edit/{id}', [upcomming::class, 'edit'])->name('upcomming.edit');
 //After Edit data that update in database and view page using post method
 Route::POST('/upcomingevents/update/{id}', [upcomming::class, 'update'])->name('upcomming.update');
-// upcoming events routes close
+
 
 //Store Routing
 Route::get('/login', [Store::class, 'login']);

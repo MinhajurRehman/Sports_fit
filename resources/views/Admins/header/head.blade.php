@@ -23,6 +23,8 @@
     <link href="{{ url('Admins/css/sb-admin-2.min.css') }}" rel="stylesheet">
     <!-- Custom styles for this page -->
     <link href="{{ url('Admins/vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
+    <!-- Custom styles for this pie char-->
+    <link href="{{ url('Admins/css/pie.css') }}" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -40,7 +42,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="{{ url('/Admin/Dashboard') }}">
+                <a class="nav-link" href="{{ url('/Admins/Dashboard') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -129,7 +131,7 @@
                     <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
-                            <h1>ADMINS</h1>
+                            <h1><b><i class="fa fa-users-viewfinder"></i></b></h1>
 
                         </div>
                     </form>

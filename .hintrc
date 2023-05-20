@@ -9,6 +9,7 @@
         "link-name": "off"
       }
     ],
-    "css-prefix-order": "off"
+    "css-prefix-order": "off",
+    "compat-api/css": "off"
   }
 }

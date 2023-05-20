@@ -95,7 +95,9 @@
                     </div>
                 </div>
             </div>
-            <div class="home_slider_nav">Next</div>
+            <div class="home_slider_nav">
+                <i class="fa fa-arrow-right"></i>
+            </div>
         </div>
     </div>
 
@@ -188,50 +190,29 @@
                         </div>
                         <div class="section_subtitle">What's next this month</div>
                     </div>
+
                     <div class="custom_list_a">
-                        <div class="upcoming_image"><img src="images/football_player.png" alt=""></div>
+                        <div class="upcoming_image"><img src="" alt=""></div>
                         <ul>
-                            <li class="d-flex flex-row align-items-center justify-content-start">
-                                <div class="custom_list_image"><img src="images/upcoming_1.jpg" alt="">
-                                </div>
-                                <div class="custom_list_title_container">
-                                    <div class="custom_list_title"><a href="blog.html">New T-shirts launch</a>
+                            @foreach ($upcoming_events as $upcomming)
+                                <li class="d-flex flex-row align-items-center justify-content-start">
+                                    <div class="custom_list_image"><img src="{{ asset($upcomming->img) }}"
+                                            alt="">
                                     </div>
-                                    <div class="custom_list_date">August 25, 2018 / 17 UTC</div>
-                                </div>
-                                <div class="custom_list_link ml-auto"><a href="blog.html">See More</a></div>
-                            </li>
-                            <li class="d-flex flex-row align-items-center justify-content-start">
-                                <div class="custom_list_image"><img src="images/upcoming_2.jpg" alt="">
-                                </div>
-                                <div class="custom_list_title_container">
-                                    <div class="custom_list_title"><a href="blog.html">Team presentation</a></div>
-                                    <div class="custom_list_date">August 25, 2018 / 17 UTC</div>
-                                </div>
-                                <div class="custom_list_link ml-auto"><a href="blog.html">See More</a></div>
-                            </li>
-                            <li class="d-flex flex-row align-items-center justify-content-start">
-                                <div class="custom_list_image"><img src="images/upcoming_3.jpg" alt="">
-                                </div>
-                                <div class="custom_list_title_container">
-                                    <div class="custom_list_title"><a href="blog.html">Press Conference</a></div>
-                                    <div class="custom_list_date">August 25, 2018 / 17 UTC</div>
-                                </div>
-                                <div class="custom_list_link ml-auto"><a href="blog.html">See More</a></div>
-                            </li>
-                            <li class="d-flex flex-row align-items-center justify-content-start">
-                                <div class="custom_list_image"><img src="images/upcoming_4.jpg" alt="">
-                                </div>
-                                <div class="custom_list_title_container">
-                                    <div class="custom_list_title"><a href="blog.html">New T-shirts launch</a>
+                                    <div class="custom_list_title_container">
+                                        <div class="custom_list_title"><a
+                                                href="blog.html">{{ $upcomming->eventtitle }}</a>
+                                        </div>
+                                        <div class="custom_list_date">{{ $upcomming->eventdate }}</div>
                                     </div>
-                                    <div class="custom_list_date">August 25, 2018 / 17 UTC</div>
-                                </div>
-                                <div class="custom_list_link ml-auto"><a href="blog.html">See More</a></div>
-                            </li>
+                                    <div class="custom_list_link ml-auto"><a href="{{ url('/tickets') }}">BUY</a></div>
+                                </li>
+                            @endforeach
                         </ul>
                     </div>
+
                 </div>
+
 
                 <div class="col-xl-6 custom_lists_col">
                     <div class="section_title_container">
@@ -242,82 +223,33 @@
                     </div>
                     <div class="custom_list_b">
                         <ul>
-                            <li class="d-flex flex-row align-items-center justify-content-start">
-                                <div class="d-flex flex-row align-items-center justify-content-start">
-                                    <div class="team_logo d-flex flex-column align-items-center justify-content-center">
-                                        <img src="images/logo_1.png" alt="">
+                            @foreach ($latest_games as $latestgames)
+                                <li class="d-flex flex-row align-items-center justify-content-start">
+                                    <div class="d-flex flex-row align-items-center justify-content-start">
+
+                                        <div
+                                            class="team_logo d-flex flex-column align-items-center justify-content-center">
+                                            <img src="{{ asset($latestgames->img_1) }}" alt="">
+                                        </div>
+                                        <div class="team_name"><a href="team.html">{{ $latestgames->team1title }}</a>
+                                        </div>
                                     </div>
-                                    <div class="team_name"><a href="team.html">The Alligators</a></div>
-                                </div>
-                                <div class="text-center">
-                                    <div>Football League</div>
-                                    <div>8 : 3</div>
-                                    <div>August 25, 2018 / 17 UTC</div>
-                                </div>
-                                <div class="d-flex flex-row align-items-center justify-content-end">
-                                    <div class="team_name text-right"><a href="team.html">The Tigers</a></div>
-                                    <div class="team_logo d-flex flex-column align-items-center justify-content-center">
-                                        <img src="images/logo_2.png" alt="">
+                                    <div class="text-center">
+                                        <div>{{ $latestgames->matchtitle }}</div>
+                                        <div>{{ $latestgames->team1score }} : {{ $latestgames->team2score }}</div>
+                                        <div>{{ $latestgames->matchdate }}</div>
                                     </div>
-                                </div>
-                            </li>
-                            <li class="d-flex flex-row align-items-center justify-content-start">
-                                <div class="d-flex flex-row align-items-center justify-content-start">
-                                    <div class="team_logo d-flex flex-column align-items-center justify-content-center">
-                                        <img src="images/logo_2.png" alt="">
+                                    <div class="d-flex flex-row align-items-center justify-content-end">
+                                        <div class="team_name text-right"><a
+                                                href="team.html">{{ $latestgames->team2title }}</a></div>
+                                        <div
+                                            class="team_logo d-flex flex-column align-items-center justify-content-center">
+                                            <img src="{{ asset($latestgames->img_2) }}" alt="">
+                                        </div>
                                     </div>
-                                    <div class="team_name"><a href="team.html">The Alligators</a></div>
-                                </div>
-                                <div class="text-center">
-                                    <div>Football League</div>
-                                    <div>8 : 3</div>
-                                    <div>August 25, 2018 / 17 UTC</div>
-                                </div>
-                                <div class="d-flex flex-row align-items-center justify-content-end">
-                                    <div class="team_name text-right"><a href="team.html">The Eagles</a></div>
-                                    <div class="team_logo d-flex flex-column align-items-center justify-content-center">
-                                        <img src="images/logo_4.png" alt="">
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="d-flex flex-row align-items-center justify-content-start">
-                                <div class="d-flex flex-row align-items-center justify-content-start">
-                                    <div class="team_logo d-flex flex-column align-items-center justify-content-center">
-                                        <img src="images/logo_3.png" alt="">
-                                    </div>
-                                    <div class="team_name"><a href="team.html">Denver Pumas</a></div>
-                                </div>
-                                <div class="text-center">
-                                    <div>Football League</div>
-                                    <div>8 : 3</div>
-                                    <div>August 25, 2018 / 17 UTC</div>
-                                </div>
-                                <div class="d-flex flex-row align-items-center justify-content-end">
-                                    <div class="team_name text-right"><a href="team.html">The Tigers</a></div>
-                                    <div class="team_logo d-flex flex-column align-items-center justify-content-center">
-                                        <img src="images/logo_2.png" alt="">
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="d-flex flex-row align-items-center justify-content-start">
-                                <div class="d-flex flex-row align-items-center justify-content-start">
-                                    <div class="team_logo d-flex flex-column align-items-center justify-content-center">
-                                        <img src="images/logo_2.png" alt="">
-                                    </div>
-                                    <div class="team_name"><a href="team.html">The Tigers</a></div>
-                                </div>
-                                <div class="text-center">
-                                    <div>Football League</div>
-                                    <div>8 : 3</div>
-                                    <div>August 25, 2018 / 17 UTC</div>
-                                </div>
-                                <div class="d-flex flex-row align-items-center justify-content-end">
-                                    <div class="team_name text-right"><a href="team.html">The Eagles</a></div>
-                                    <div class="team_logo d-flex flex-column align-items-center justify-content-center">
-                                        <img src="images/logo_4.png" alt="">
-                                    </div>
-                                </div>
-                            </li>
+                                </li>
+                            @endforeach
+
                         </ul>
                     </div>
                 </div>
@@ -475,7 +407,8 @@
                     <div
                         class="cta_content d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-start">
                         <div class="cta_text">Would you like to join our <span>SPORTS CLUB?</span></div>
-                        <div class="cta_button button ml-md-auto"><a href="#">See More Info</a></div>
+                        <div class="cta_button button ml-md-auto"><a href="{{ url('/membership') }}">See More Info</a>
+                        </div>
                     </div>
                 </div>
             </div>

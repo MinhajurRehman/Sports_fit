@@ -21,24 +21,25 @@
                         <div class="contact_title">BUY EVENTS TICKET</div>
 
                         <div class="contact_form_container">
-                            <form action="#" class="contact_form" id="contact_form">
-                                <input type="text" class="contact_input" placeholder="Name" required="required">
-                                <input type="email" class="contact_input" placeholder="Mail" required="required">
-                                <input type="text" class="contact_input" placeholder="Membership No">
+                            <form method="post" class="contact_form" id="contact_form">
+                                @csrf
+                                <input type="text" name="name" class="contact_input" placeholder="Name"
+                                    required="required">
+                                <input type="email" name="email" class="contact_input" placeholder="Mail"
+                                    required="required">
+                                <input type="text" name="membership" class="contact_input" placeholder="Membership No">
                                 <label for="Event">Choose a event:</label>
                                 <select id="event" name="event">
-                                    <option value="name">name</option>
-                                    <option value="name">name</option>
-                                    <option value="name">name</option>
-                                    <option value="name">name</option>
+                                    <option value="Cricket_Tournament">Cricket Tournament</option>
+                                    <option value="Ruby_Tournament">Ruby Tournament</option>
                                 </select>
                                 <label for="payment">Choose a payment method:</label>
                                 <select id="payment" name="payment">
-                                    <option value="name">name</option>
-                                    <option value="name">name</option>
-                                    <option value="name">name</option>
-                                    <option value="name">name</option>
+                                    <option value="payment">Choose a payment method</option>
+                                    <option value="Easypaisa">Easypaisa</option>
+                                    <option value="bank Transfer">bank Transfer</option>
                                 </select>
+                                <input type="submit" class="btn btn-primary">
                             </form>
                         </div>
                     </div>
