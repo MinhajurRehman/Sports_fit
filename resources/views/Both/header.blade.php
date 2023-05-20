@@ -96,10 +96,10 @@
 
                                         <div class="user_area">
                                             <ul class="d-flex flex-row align-items-start justify-content-start">
-                                                <li><a href="{{ url('folder/create') }}"><i class="fa fa-user-o"
+                                                <li><a href="{{ url('/membership') }}"><i class="fa fa-user-o"
                                                             aria-hidden="true"></i>
                                                         MEMBERSHIP </a></li>
-                                                <li><a href="{{ url('/Admin/Dashboard') }}"><i class="fa fa-sign-in"
+                                                <li><a href="{{ url('/Admins/Dashboard') }}"><i class="fa fa-sign-in"
                                                             aria-hidden="true"></i>
                                                         ADMINS </a></li>
                                             </ul>
@@ -119,9 +119,10 @@
                     <div class="menu_close">close</div>
                     <div class="menu_user_area">
                         <ul class="d-flex flex-row align-items-start justify-content-end">
-                            <li><a href="{{ url('folder/create') }}"><i class="fa fa-user-o" aria-hidden="true"></i>
+                            <li><a href="{{ url('/membership') }}"><i class="fa fa-user-o" aria-hidden="true"></i>
                                     MEMBERSHIP </a></li>
-                            <li><a href="{{ url('/Admin/Dashboard') }}"><i class="fa fa-sign-in" aria-hidden="true"></i>
+                            <li><a href="{{ url('/Admins/Dashboard') }}"><i class="fa fa-sign-in"
+                                        aria-hidden="true"></i>
                                     ADMINS </a></li>
                         </ul>
                     </div>

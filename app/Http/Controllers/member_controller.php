@@ -12,10 +12,10 @@ class member_controller extends Controller
     public function create()
     {
         $members = new member;   // variable define
-        $url = url('/membership-form');
+        $url = url('/membership');
         $title = "Register membership Details";
         $data = compact('url', 'title', 'members');
-        return view('create')->with($data);
+        return view('crte')->with($data);
     }
 
     public function store(Request $request)
@@ -31,12 +31,8 @@ class member_controller extends Controller
     }
     public function readproject()
     {
-        // Fetch table contents, then
-        // pass to the web page
+
         $members = member::all();
-        // In the with statement below, the array name
-        // 'students' is being passed to the web page (view),
-        // where we shall use it in the foreach loop there.
         return view("Admins.folder.read")
             ->with(['members' => $members]);
     }
@@ -61,7 +57,7 @@ class member_controller extends Controller
             $title = "Update membership-form";
             $url = url('/member/update') . "/" . $id;
             $data = compact('members', 'url', 'title');
-            return view('create')->with($data);
+            return view('crte')->with($data);
         }
     }
 

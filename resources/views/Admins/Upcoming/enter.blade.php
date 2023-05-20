@@ -4,7 +4,7 @@
     <div>
         <h1>{{ $title }} </h1>
     </div>
-    <form action="{{ $url }}" method="POST" enctype='multipart/form-data'>
+    <form action="{{ $url }}" method="post" enctype='multipart/form-data'>
         @csrf
         <label for="Event-image">Event Image</label>
         <input type="file" id="img" name="img">

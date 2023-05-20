@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\member_controller;
 use App\Http\Controllers\latestgame;
@@ -17,6 +18,8 @@ use App\Http\Controllers\upcomming;
 |
 */
 
+
+
 // Index Page
 Route::get('/', function () {
     return view('index');
@@ -33,15 +36,13 @@ Route::get('/tickets', function () {
 });
 
 // Admin Dashboard
-Route::get('/Admin/Dashboard', function () {
-    return view('Admins.Dashboard');
-});
+Route::get('/Admins/Dashboard', [AdminController::class, 'Dashboard']);
 
 
 //Membership Routes
 Route::get('folder/read', [member_controller::class, 'readproject']);
-Route::get('folder/create', [member_controller::class, 'create'])->name('folder.create');
-Route::post('folder/create', [member_controller::class, 'store']);
+Route::get('/membership', [member_controller::class, 'create'])->name('folder.create');
+Route::post('/membership', [member_controller::class, 'store']);
 //Go to View page and delete data
 Route::get('/member/del/{id}', [member_controller::class, 'delete'])->name('member.delete');
 //Go to View page and Edit data
@@ -66,7 +67,7 @@ Route::POST('/latestgames/update/{id}', [latestgame::class, 'update'])->name('la
 //upcoming events Routes
 Route::get('upcomingevents/show', [upcomming::class, 'readproject']);
 Route::get('upcomingevents/get', [upcomming::class, 'create'])->name('upcomming.get');
-Route::POST('upcomingevents/get', [upcomming::class, 'store']);
+Route::post('upcomingevents/get', [upcomming::class, 'store']);
 // Go to View page and delete data
 Route::get('/upcomingevents/del/{id}', [upcomming::class, 'delete'])->name('upcomming.delete');
 //Go to View page and Edit data
@@ -76,7 +77,6 @@ Route::POST('/upcomingevents/update/{id}', [upcomming::class, 'update'])->name('
 // upcoming events routes close
 
 //Store Routing
-
 Route::get('/login', [Store::class, 'login']);
 Route::get('/Reg', [Store::class, 'Register']);
 Route::get('/int', [Store::class, 'interface']);

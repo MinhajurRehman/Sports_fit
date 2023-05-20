@@ -12,7 +12,7 @@ class upcomming extends Controller
     public function create()
     {
         $upcoming_events = new up;   // variable define
-        $url = url('/upcomingevents/show');
+        $url = url('/upcomingevents/get');
         $title = "Event Form";
         $data = compact('url', 'title', 'upcoming_events');
         return view('Admins.Upcoming.enter')->with($data);
@@ -79,5 +79,14 @@ class upcomming extends Controller
         $upcoming_events->save();
 
         return redirect('upcomingevents/show');
+    }
+
+
+
+    public function Dashboard()
+    {
+        $upcoming_events = up::all();
+        return view("Admins.Dashboard")
+            ->with(['upcoming_events' => $upcoming_events]);
     }
 }

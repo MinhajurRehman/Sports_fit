@@ -31,19 +31,19 @@
                 </tr>
             </thead>
             {{-- Foreach loop using to create and view data --}}
-            @foreach ($upcoming_events as $upcoming_events)
+            @foreach ($upcoming_events as $upcomming)
                 {{-- tr = table row --}}
                 <tr>
                     {{-- td = Table data --}}
-                    <td><img src="{{ $upcoming_events->img }}"></td>
-                    <td>{{ $upcoming_events->eventtitle }}</td>
-                    <td>{{ $upcoming_events->eventdate }}</td>
+                    <td><img src="{{ $upcomming->img }}"></td>
+                    <td>{{ $upcomming->eventtitle }}</td>
+                    <td>{{ $upcomming->eventdate }}</td>
                     <td>
-                        <a href="{{ route('latestgames.delete', ['id' => $latestgames->id]) }}"><button
+                        <a href="{{ route('upcomming.delete', ['id' => $upcomming->id]) }}"><button
                                 class="btn btn-danger">Delete</button></a>
                     </td>
                     <td>
-                        <a href="{{ route('latestgames.edit', ['id' => $latestgames->id]) }}"><button
+                        <a href="{{ route('upcomming.edit', ['id' => $upcomming->id]) }}"><button
                                 class="btn btn-success">Edit</button></a>
                     </td>
                 </tr>

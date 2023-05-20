@@ -1,35 +1,41 @@
 @extends('Both.abc')
-
 @section('main-container')
-    <div>
+    <div class="con">
         <h1>{{ $title }}</h1>
+
+        <form action="{{ $url }}" method="post">
+            @csrf
+
+            <input type="text" id="name" name="name" value="{{ $members->name }}" placeholder="Enter Your Full Name">
+
+            <input type="text" id="address" name="address" value="{{ $members->address }}"
+                placeholder="Enter Your Complete Address">
+
+            <input type="text" id="contact" name="contact" value="{{ $members->contact }}"
+                placeholder="Enter Your Contact Number">
+
+            <select id="payment_method" name="payment_method" value="{{ $members->payment_method }}">
+                <option value="Choose Payment Method">Choose Payment Method</option>
+                <option value="Easypaisa">Easypaisa</option>
+                <option value="Crypto">Crypto</option>
+                <option value="Banktransfer">Banktransfer</option>
+                <option value="Cash">Cash</option>
+
+
+
+            </select>
+            <input type="submit" value="submit">
+
+
+        </form>
     </div>
-    <form action="{{ $url }}" method="post">
-        @csrf
-
-        <input type="text" id="name" name="name" value="{{ $members->name }}" placeholder="Enter Your Full Name">
-
-        <input type="text" id="address" name="address" value="{{ $members->address }}"
-            placeholder="Enter Your Complete Address">
-
-        <input type="text" id="contact" name="contact" value="{{ $members->contact }}"
-            placeholder="Enter Your Contact Number">
-
-        <select id="payment_method" name="payment_method" value="{{ $members->payment_method }}">
-            <option value="Choose Payment Method">Choose Payment Method</option>
-            <option value="Easypaisa">Easypaisa</option>
-            <option value="Crypto">Crypto</option>
-            <option value="Banktransfer">Banktransfer</option>
-            <option value="Cash">Cash</option>
-
-
-
-        </select>
-        <input type="submit" value="submit">
-
-
-    </form>
     <style>
+        .con {
+            padding-top: 20%;
+
+
+        }
+
         h1 {
             text-align: center;
 

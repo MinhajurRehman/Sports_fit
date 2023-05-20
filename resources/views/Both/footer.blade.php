@@ -5,7 +5,7 @@
                 <div class="col-lg-5 order-lg-1 order-3">
                     <div
                         class="footer_image d-flex flex-column align-items-lg-start align-items-center justify-content-end">
-                        <div><img src="images/footer.png" alt=""></div>
+                        <div><img src="{{ url('Admins/images/logos.png') }}" alt=""></div>
                     </div>
                 </div>
                 <div class="col-lg-3 order-lg-2 order-1">

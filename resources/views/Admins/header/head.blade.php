@@ -11,6 +11,7 @@
 
     <title>Sports Fit Admin</title>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Custom fonts for this template-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"
         type="text/css">
@@ -35,8 +36,7 @@
             <!-- Sidebar - Brand -->
             <img src="{{ url('Admins/images/logo.png') }}">
 
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
+
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
@@ -53,18 +53,19 @@
                 FORMS
             </div>
 
-            <!-- Nav Item - Forms -->
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url('folder/create') }}">
-                    <i class="fas fa-fw fa-list"></i>
-                    <span>Form Membership</span></a>
-            </li>
 
             <!-- Nav Item - Forms -->
             <li class="nav-item">
                 <a class="nav-link" href="{{ url('latestgames/get') }}">
                     <i class="fas fa-fw fa-list"></i>
-                    <span>Form Match Details</span></a>
+                    <span>Match Details</span></a>
+            </li>
+
+            <!-- Nav Item - Forms -->
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url('upcomingevents/get') }}">
+                    <i class="fas fa-fw fa-list"></i>
+                    <span>Upcoming Events</span></a>
             </li>
 
             <!-- Divider -->
@@ -88,6 +89,13 @@
                 <a class="nav-link" href="{{ url('latestgames/show') }}">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Tables of Match details</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url('upcomingevents/show') }}">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Upcoming Event Data</span></a>
             </li>
 
             <!-- Divider -->
