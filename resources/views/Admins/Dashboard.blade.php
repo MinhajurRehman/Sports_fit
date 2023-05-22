@@ -47,10 +47,89 @@
                 </table>
             </div>
             <div class="col-lg-4">
-                <div class="pie animate" style="--p:20"> 20%</div>
-                <div class="pie animate" style="--p:40;--c:darkblue;--b:10px"> 40%</div>
-                <div class="pie animate no-round" style="--p:60;--c:purple;--b:15px"> 60%</div>
-                <div class="pie animate no-round" style="--p:80;--c:orange;"> 80%</div>
+                <img src="{{ url('Admins/images/membership.png') }}" width="99%">
+
+            </div>
+            {{-- Container close --}}
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-lg-4">
+                <img src="{{ url('Admins/images/ticket.png') }}" width="80%">
+
+            </div>
+            <div class="col-lg-8">
+                <h1>BUY Tickets Users Details</h1>
+                {{-- Membership Table Data fetch  --}}
+                <table class="table" id="dataTable" width="100%" cellspacing="0">
+                    {{-- Table head heading that Stable in position --}}
+                    <thead>
+                        {{-- tr = table row --}}
+
+                        <tr>
+                            {{-- th = Table head --}}
+                            <th><b>ID</b></th>
+                            <th><b>name</b></th>
+                            <th><b>email</b></th>
+                            <th><b>membership No</b></th>
+                            <th><b>event Name</b></th>
+                            <th><b>payment</b></th>
+                        </tr>
+                    </thead>
+                    {{-- Foreach loop using to create and view data --}}
+                    @foreach ($ticket_details as $ticket)
+                        {{-- tr = table row --}}
+                        <tr>
+                            {{-- td = Table data --}}
+                            <td>{{ $ticket->id }}</td>
+                            <td>{{ $ticket->name }}</td>
+                            <td>{{ $ticket->email }}</td>
+                            <td>{{ $ticket->membership }}</td>
+                            <td>{{ $ticket->event }}</td>
+                            <td>{{ $ticket->payment }}</td>
+                        </tr>
+                    @endforeach
+                    {{-- Close Foreach loop --}}
+                </table>
+            </div>
+            {{-- Container close --}}
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-lg-8">
+                <h1>User Contacts Information</h1>
+                {{-- Membership Table Data fetch  --}}
+                <table class="table" id="dataTable" width="100%" cellspacing="0">
+                    {{-- Table head heading that Stable in position --}}
+                    <thead>
+                        {{-- tr = table row --}}
+
+                        <tr>
+                            {{-- th = Table head --}}
+                            <th><b>ID</b></th>
+                            <th><b>name</b></th>
+                            <th><b>email</b></th>
+                            <th><b>subject</b></th>
+                            <th><b>Message</b></th>
+                        </tr>
+                    </thead>
+                    {{-- Foreach loop using to create and view data --}}
+                    @foreach ($contact_details as $contact)
+                        {{-- tr = table row --}}
+                        <tr>
+                            {{-- td = Table data --}}
+                            <td>{{ $contact->id }}</td>
+                            <td>{{ $contact->name }}</td>
+                            <td>{{ $contact->email }}</td>
+                            <td>{{ $contact->subject }}</td>
+                            <td>{{ $contact->textarea }}</td>
+                        </tr>
+                    @endforeach
+                    {{-- Close Foreach loop --}}
+                </table>
+            </div>
+            <div class="col-lg-4">
+                <img src="{{ url('Admins/images/contact.png') }}" width="75%">
 
             </div>
             {{-- Container close --}}

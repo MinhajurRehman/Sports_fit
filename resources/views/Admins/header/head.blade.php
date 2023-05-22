@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-
+    <link rel="icon" type="image/x-icon" href="{{ url('Admins/images/logos.png') }}">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,8 +23,6 @@
     <link href="{{ url('Admins/css/sb-admin-2.min.css') }}" rel="stylesheet">
     <!-- Custom styles for this page -->
     <link href="{{ url('Admins/vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
-    <!-- Custom styles for this pie char-->
-    <link href="{{ url('Admins/css/pie.css') }}" rel="stylesheet">
 </head>
 
 <body id="page-top">

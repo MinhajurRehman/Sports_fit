@@ -5,6 +5,7 @@
 
 
 <head>
+    <link rel="icon" type="image/x-icon" href="{{ url('Admins/images/logos.png') }}">
     <title>Sports Fit</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -100,7 +101,7 @@
                                                 <li><a href="{{ url('/membership') }}"><i class="fa fa-user-o"
                                                             aria-hidden="true"></i>
                                                         MEMBERSHIP </a></li>
-                                                <li><a href="{{ url('/Admins/Dashboard') }}"><i class="fa fa-sign-in"
+                                                <li><a href="{{ url('/Admins/Login') }}"><i class="fa fa-sign-in"
                                                             aria-hidden="true"></i>
                                                         ADMINS </a></li>
                                             </ul>
@@ -122,8 +123,7 @@
                         <ul class="d-flex flex-row align-items-start justify-content-end">
                             <li><a href="{{ url('/membership') }}"><i class="fa fa-user-o" aria-hidden="true"></i>
                                     MEMBERSHIP </a></li>
-                            <li><a href="{{ url('/Admins/Dashboard') }}"><i class="fa fa-sign-in"
-                                        aria-hidden="true"></i>
+                            <li><a href="{{ url('/Admins/Login') }}"><i class="fa fa-sign-in" aria-hidden="true"></i>
                                     ADMINS </a></li>
                         </ul>
                     </div>

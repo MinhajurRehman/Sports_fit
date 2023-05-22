@@ -38,6 +38,9 @@ Route::get('/tickets', function () {
     return view('Tickets');
 });
 
+// Admin Login
+Route::get('/Admins/Login', [AdminController::class, 'fetch']);
+
 // ticket page Data store & Send Via Email
 Route::post('/tickets', [ticketes::class, 'store']);
 

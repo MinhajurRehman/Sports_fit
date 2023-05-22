@@ -1,58 +1,134 @@
 @extends('Both.abc')
 @section('main-container')
-    <div class="con">
-        <h1>{{ $title }}</h1>
-
-        <form action="{{ $url }}" method="post">
-            @csrf
-
-            <label for="plan">Select a plan:</label>
-            <select id="plan" name="plan" onchange="calculatePayment()">
-                <option value="Basic">Basic</option>
-                <option value="standard">Standard</option>
-                <option value="premium">Premium</option>
-            </select>
-
-            <input type="text" id="name" name="name" value="{{ $members->name }}"
-                placeholder="Enter Your Full Name">
-
-            <input type="text" id="address" name="address" value="{{ $members->address }}"
-                placeholder="Enter Your Complete Address">
-
-            <input type="text" id="contact" name="contact" value="{{ $members->contact }}"
-                placeholder="Enter Your Contact Number">
-
-            <select id="payment_method" name="payment_method" value="{{ $members->payment_method }}">
-                <option value="Choose Payment Method">Choose Payment Method</option>
-                <option value="Easypaisa">Easypaisa</option>
-                <option value="Banktransfer">Banktransfer</option>
-            </select>
-            <label for="payment">Show Package payment:</label>
-            <input type="text" name="pay" id="payment" readonly>
-            <input type="submit" value="submit">
-
-
-        </form>
-        <script>
-            function calculatePayment() {
-                var plan = document.getElementById("plan").value;
-                var paymentField = document.getElementById("payment");
-
-                if (plan === "standard") {
-                    paymentField.value = "Rs. 5,000";
-                } else if (plan === "premium") {
-                    paymentField.value = "Rs. 10,000";
-                } else if (plan === "Basic") {
-                    paymentField.value = "Rs. 2,500";
-                }
-            }
-        </script>
+    <div class="row con">
+        <div class="col-md-12">
+            <img src="{{ url('/images/testimonials.jpg') }}">
+        </div>
     </div>
+
+
+    <div class="container">
+        <div class="row con">
+
+            <div class="col-md-6">
+                <div style="padding-top: 20%";>
+                    <div class="c">
+                        <div class="card box">
+                            <div class="card-body">
+                                <h4 class="card-title">Basic Card</h4>
+                                <p class="card-text">Some example text. Some example text.</p>
+                                <p class="card-text">2500</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="c">
+                        <div class="card box">
+                            <div class="card-body">
+                                <h4 class="card-title">Standard Card</h4>
+                                <p class="card-text">Some example text. Some example text.</p>
+                                <p class="card-text">5000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c">
+                        <div class="card box">
+                            <div class="card-body">
+                                <h4 class="card-title">Premium Card</h4>
+                                <p class="card-text">Some example text. Some example text.</p>
+                                <p class="card-text">10.000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 box">
+                <h1>{{ $title }}</h1>
+
+                <form action="{{ $url }}" method="post">
+                    @csrf
+                    <label for="plan">Select a plan:</label>
+                    <select id="plan" name="plan" onchange="calculatePayment()">
+                        <option value="Basic">Basic</option>
+                        <option value="standard">Standard</option>
+                        <option value="premium">Premium</option>
+                    </select>
+
+                    <input type="text" id="name" name="name" value="{{ $members->name }}"
+                        placeholder="Enter Your Full Name">
+
+                    <input type="text" id="address" name="address" value="{{ $members->address }}"
+                        placeholder="Enter Your Complete Address">
+
+                    <input type="text" id="contact" name="contact" value="{{ $members->contact }}"
+                        placeholder="Enter Your Contact Number">
+
+                    <select id="payment_method" name="payment_method" value="{{ $members->payment_method }}">
+                        <option value="Choose Payment Method">Choose Payment Method</option>
+                        <option value="Easypaisa">Easypaisa</option>
+                        <option value="Banktransfer">Banktransfer</option>
+                    </select>
+                    <label for="payment">Show Package payment:</label>
+                    <input type="text" name="pay" id="payment" readonly>
+                    <input type="submit" class="btn btn-default" value="submit">
+
+
+                </form>
+                <script>
+                    function calculatePayment() {
+                        var plan = document.getElementById("plan").value;
+                        var paymentField = document.getElementById("payment");
+
+                        if (plan === "standard") {
+                            paymentField.value = "Rs. 5,000";
+                        } else if (plan === "premium") {
+                            paymentField.value = "Rs. 10,000";
+                        } else if (plan === "Basic") {
+                            paymentField.value = "Rs. 2,500";
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+
+
+
     <style>
+        .box {
+            background-color: transparent;
+            border-radius: 10px;
+            box-shadow: 0 0 10px lightslategray;
+            padding: 20px;
+            text-align: center;
+            padding-right: 40px;
+        }
+
+        .box h4,
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .box p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .box:hover {
+            transform: scale(0.95);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .c {
+            padding-bottom: 30px;
+        }
+
         .con {
-            padding-top: 20%;
-
-
+            padding-bottom: 5%;
         }
 
         h1 {
