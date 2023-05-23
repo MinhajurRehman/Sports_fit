@@ -127,7 +127,7 @@
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <form method="get" action="{{ $url }}">
+    <form method="get" action="{{ url('/Admins/Dashboard') }}">
         @csrf
         <h3>Admin Login</h3>
         <label for="username">Username</label> <input type="text" name="username" placeholder="Email or Phone"

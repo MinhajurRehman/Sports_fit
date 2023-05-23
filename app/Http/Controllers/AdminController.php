@@ -28,14 +28,12 @@ class AdminController extends Controller
             ->with('ticket_details', $ticket_details)
             ->with('contact_details', $contact_details);
     }
+
     public function fetch()
     {
+        $admin = new Admin;
         //member details fetch
-        $admins = new Admin;
-        $url = '/Admins/Dashboard';
-        $data = compact('url');
-        $admins = Admin::all();
-        //define all data using with function
-        return view("Admins.AdminLogin")->with('admins', $admins)->with($data);
+        $admin = Admin::all();
+        return view("Admins.AdminLogin")->with('admin', $admin);
     }
 }
