@@ -6,6 +6,7 @@ use App\Http\Controllers\index;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\member_controller;
 use App\Http\Controllers\latestgame;
+use App\Http\Controllers\StripePaymentController;
 use App\Http\Controllers\ticketes;
 use App\Http\Controllers\upcomming;
 
@@ -55,7 +56,7 @@ Route::get('/', [index::class, 'Dashboard']);
 
 //Membership Routes
 Route::get('folder/read', [member_controller::class, 'readproject'])->middleware('auth');
-Route::get('/membership', [member_controller::class, 'create'])->middleware('auth')->name('folder.create');
+Route::get('/membership', [member_controller::class, 'create'])->name('folder.create');
 Route::post('/membership', [member_controller::class, 'store']);
 //Go to View page and delete data
 Route::get('/member/del/{id}', [member_controller::class, 'delete'])->middleware('auth')->name('member.delete');
@@ -85,3 +86,7 @@ Route::get('/upcomingevents/del/{id}', [upcomming::class, 'delete'])->middleware
 Route::get('/upcomingevents/edit/{id}', [upcomming::class, 'edit'])->middleware('auth')->name('upcomming.edit');
 //After Edit data that update in database and view page using post method
 Route::POST('/upcomingevents/update/{id}', [upcomming::class, 'update'])->name('upcomming.update');
+
+
+Route::get('/stripe', [StripePaymentController::class, 'paymentStripe'])->name('addmoney.paymentstripe');
+Route::post('add-money-stripe', [StripePaymentController::class, 'postPaymentStripe'])->name('addmoney.stripe');
