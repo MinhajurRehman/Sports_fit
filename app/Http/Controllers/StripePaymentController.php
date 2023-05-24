@@ -25,7 +25,7 @@ class StripePaymentController extends Controller
         $input = $request->except('_token');
 
         if ($validator->passes()) {
-            $stripe = Stripe::setApiKey('Enter Your API KEY SECURE KEY');
+            $stripe = Stripe::setApiKey('sk_test_51NAvTzIZ8menn2XDBM4bj7SIfHR4dLH9p7GDpAzjgRuqbLj69Z8CuOWOc37VljgTDaiEba8hV90fgCELYrV0Xuof004PCeDRqA');
 
             try {
                 $token = $stripe->tokens()->create([

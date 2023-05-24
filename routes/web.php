@@ -39,8 +39,12 @@ Route::get('/tickets', function () {
     return view('Tickets');
 });
 
-// Admin Login
-Route::get('/Admins/Login', [AdminController::class, 'fetch'])->name('login');
+// Admin Login / Reg / Logout Routing
+Route::get('/Admins/Login', [AdminController::class, 'fetch']);
+Route::get('/Reg', [AdminController::class, 'Reg']);
+Route::post('/Reg', [AdminController::class, 'Registration']);
+Route::post('login-admin', [AdminController::class, 'loginadmin'])->name('login-admin');
+Route::get('/Logout', [AdminController::class, 'Logout']);
 
 // ticket page Data store & Send Via Email
 Route::post('/tickets', [ticketes::class, 'store']);
@@ -49,41 +53,41 @@ Route::post('/tickets', [ticketes::class, 'store']);
 Route::post('/contact', [contact::class, 'store']);
 
 // Admin Dashboard
-Route::get('/Admins/Dashboard', [AdminController::class, 'Dashboard'])->middleware('auth');
+Route::get('/Admins/Dashboard', [AdminController::class, 'Dashboard'])->middleware('isLogIn');
 
 //fetch layout index data from database
 Route::get('/', [index::class, 'Dashboard']);
 
 //Membership Routes
-Route::get('folder/read', [member_controller::class, 'readproject'])->middleware('auth');
+Route::get('folder/read', [member_controller::class, 'readproject'])->middleware('isLogIn');
 Route::get('/membership', [member_controller::class, 'create'])->name('folder.create');
 Route::post('/membership', [member_controller::class, 'store']);
 //Go to View page and delete data
-Route::get('/member/del/{id}', [member_controller::class, 'delete'])->middleware('auth')->name('member.delete');
+Route::get('/member/del/{id}', [member_controller::class, 'delete'])->middleware('isLogIn')->name('member.delete');
 //Go to View page and Edit data
-Route::get('/member/edit/{id}', [member_controller::class, 'edit'])->middleware('auth')->name('member.edit');
+Route::get('/member/edit/{id}', [member_controller::class, 'edit'])->middleware('isLogIn')->name('member.edit');
 //After Edit data that update in database and view page using post method
-Route::POST('/member/update/{id}', [member_controller::class, 'update'])->middleware('auth')->name('member.update');
+Route::POST('/member/update/{id}', [member_controller::class, 'update'])->middleware('isLogIn')->name('member.update');
 
 //latest games Routes
-Route::get('latestgames/show', [latestgame::class, 'readproject'])->middleware('auth');
-Route::get('latestgames/get', [latestgame::class, 'create'])->middleware('auth')->name('latestgames.get');
+Route::get('latestgames/show', [latestgame::class, 'readproject'])->middleware('isLogIn');
+Route::get('latestgames/get', [latestgame::class, 'create'])->middleware('isLogIn')->name('latestgames.get');
 Route::post('latestgames/get', [latestgame::class, 'store']);
 // Go to View page and delete data
-Route::get('/latestgames/del/{id}', [latestgame::class, 'delete'])->middleware('auth')->name('latestgames.delete');
+Route::get('/latestgames/del/{id}', [latestgame::class, 'delete'])->middleware('isLogIn')->name('latestgames.delete');
 //Go to View page and Edit data
-Route::get('/latestgames/edit/{id}', [latestgame::class, 'edit'])->middleware('auth')->name('latestgames.edit');
+Route::get('/latestgames/edit/{id}', [latestgame::class, 'edit'])->middleware('isLogIn')->name('latestgames.edit');
 //After Edit data that update in database and view page using post method
 Route::POST('/latestgames/update/{id}', [latestgame::class, 'update'])->name('latestgames.update');
 
 //upcoming events Routes
-Route::get('upcomingevents/show', [upcomming::class, 'readproject'])->middleware('auth');
-Route::get('upcomingevents/get', [upcomming::class, 'create'])->middleware('auth')->name('upcomming.get');
+Route::get('upcomingevents/show', [upcomming::class, 'readproject'])->middleware('isLogIn');
+Route::get('upcomingevents/get', [upcomming::class, 'create'])->middleware('isLogIn')->name('upcomming.get');
 Route::post('upcomingevents/get', [upcomming::class, 'store']);
 // Go to View page and delete data
-Route::get('/upcomingevents/del/{id}', [upcomming::class, 'delete'])->middleware('auth')->name('upcomming.delete');
+Route::get('/upcomingevents/del/{id}', [upcomming::class, 'delete'])->middleware('isLogIn')->name('upcomming.delete');
 //Go to View page and Edit data
-Route::get('/upcomingevents/edit/{id}', [upcomming::class, 'edit'])->middleware('auth')->name('upcomming.edit');
+Route::get('/upcomingevents/edit/{id}', [upcomming::class, 'edit'])->middleware('isLogIn')->name('upcomming.edit');
 //After Edit data that update in database and view page using post method
 Route::POST('/upcomingevents/update/{id}', [upcomming::class, 'update'])->name('upcomming.update');
 

@@ -108,7 +108,7 @@
             color: #e5e5e5;
         }
 
-        button {
+        input[type=submit] {
             margin-top: 50px;
             width: 100%;
             background: linear-gradient(#ff512f, #f09819);
@@ -127,14 +127,30 @@
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <form method="get" action="{{ url('/Admins/Dashboard') }}">
+    <form method="post" action="{{ route('login-admin') }}">
+        @if (Session::has('success'))
+            <div class="alert alert-success">{{ Session::get('Success') }}</div>
+        @endif
+        @if (Session::has('fail'))
+            <div class="alert alert-danger">{{ Session::get('fail') }}</div>
+        @endif
         @csrf
         <h3>Admin Login</h3>
         <label for="username">Username</label> <input type="text" name="username" placeholder="Email or Phone"
             id="username">
+        <span class="text-danger">
+            @error('username')
+                {{ $message }}
+            @enderror
+        </span>
         <label for="password">Password</label> <input type="password" name="password" placeholder="Password"
             id="password">
-        <button>Log In</button>
+        <span class="text-danger">
+            @error('password')
+                {{ $message }}
+            @enderror
+        </span>
+        <input type="submit">
     </form>
 </body>
 

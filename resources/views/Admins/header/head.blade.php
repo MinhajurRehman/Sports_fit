@@ -166,7 +166,7 @@
 
                         <!-- Nav Item - User Information -->
                         <li>
-                            <a href="#">
+                            <a href="{{ url('/Logout') }}">
                                 <button class="btn btn-danger">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout

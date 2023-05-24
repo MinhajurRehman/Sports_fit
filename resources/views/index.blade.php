@@ -332,7 +332,7 @@
                                     enim lacinia, sed feugiat ex suscipit.</p>
                             </div>
                             <br>
-                            <div class="custom_list_link"><a href="blog.html">Buy Tickets</a></div>
+                            <div class="custom_list_link"><a href="#">Buy Tickets</a></div>
                         </div>
                     </div>
                 </div>
@@ -353,7 +353,7 @@
                         <div class="news_post_content">
                             <div class="tags">
                                 <ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
-                                    <li><a href="blog.html">News</a></li>
+                                    <li><a href="#">News</a></li>
                                 </ul>
                             </div>
                             <div class="news_post_title"><a href="blog.html">Junior league Openings</a></div>
@@ -362,7 +362,7 @@
                                     enim lacinia, sed feugiat ex suscipit.</p>
                             </div>
                             <br>
-                            <div class="custom_list_link"><a href="blog.html">Buy Tickets</a></div>
+                            <div class="custom_list_link"><a href="#">Buy Tickets</a></div>
                         </div>
                     </div>
                 </div>
@@ -392,7 +392,7 @@
                                     enim lacinia, sed feugiat ex suscipit.</p>
                             </div>
                             <br>
-                            <div class="custom_list_link"><a href="blog.html">Buy Tickets</a></div>
+                            <div class="custom_list_link"><a href="#">Buy Tickets</a></div>
                         </div>
                     </div>
                 </div>

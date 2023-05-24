@@ -12,11 +12,11 @@
 <body>
     <div class="container">
         <div class='row'>
-            <h1>Laravel 9 How To Integrate Stripe Payment Gateway</h1>
+            <h1>Payment Method</h1>
             <div class='col-md-12'>
                 <div class="card">
                     <div class="card-header">
-                        Laravel 9 How To Integrate Stripe Payment Gateway
+                        Payment Method
                     </div>
                     <div class="card-body">
                         <form class="form-horizontal" method="post" id="payment-form" role="form"

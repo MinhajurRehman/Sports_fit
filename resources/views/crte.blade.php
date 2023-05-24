@@ -40,6 +40,29 @@
                             </div>
                         </div>
                     </div>
+                    <div class="c">
+                        <div class="card box">
+                            <div class="card-body">
+                                <h4 class="card-title">Membership Number generator</h4>
+                                <p class="card-text">copy it</p>
+                                <button class="btn btn-primary" onclick="gfg();">
+                                    click here
+                                </button>
+                                <p id="geeks">
+                                    <script>
+                                        var up = document.getElementById('GFG_UP');
+                                        var down = document.getElementById('geeks');
+
+                                        function gfg() {
+                                            var minm = 10000;
+                                            var maxm = 99999;
+                                            down.innerHTML = Math.floor(Math
+                                                .random() * (maxm - minm + 1)) + minm;
+                                        }
+                                    </script>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -65,8 +88,6 @@
                         placeholder="Enter Your Contact Number">
 
                     <select id="payment_method" name="payment_method" value="{{ $members->payment_method }}">
-                        <option value="Choose Payment Method">Choose Payment Method</option>
-                        <option value="Easypaisa">Easypaisa</option>
                         <option value="Banktransfer">Banktransfer</option>
                     </select>
                     <label for="payment">Show Package payment:</label>

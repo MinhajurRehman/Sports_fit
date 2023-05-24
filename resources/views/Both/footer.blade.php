@@ -2,12 +2,27 @@
     <div class="footer_container">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5 order-lg-1 order-3">
-                    {{-- Working in Div --}}
-                </div>
-                <div class="col-lg-3 order-lg-2 order-1">
+                <div class="col-lg-6 order-lg-2 order-1">
                     <div class="footer_contact_info">
                         <div class="footer_logo"><img src="images/logo.png" alt=""></a></div>
+
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-3 order-2">
+                    <div class="newsletter">
+                        <div class="newsletter_title">Subscribe to newsletter</div>
+                        <div class="newsletter_form_container">
+                            <form action="#" class="newsletter_form" id="newsletter_form">
+                                <div class="d-flex flex-row align-items-start justify-content-start">
+                                    <input type="email" class="newsletter_input" placeholder="Your e-mail address"
+                                        required="required">
+                                    <button class="newsletter_button">Submit</button>
+                                </div>
+                            </form>
+                            <div class="newsletter_text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
                         <div class="footer_contact_list">
                             <ul>
                                 <li class="d-flex flex-row align-items-start justify-content-start">
@@ -25,23 +40,6 @@
                                     </div>
                                 </li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 order-lg-3 order-2">
-                    <div class="newsletter">
-                        <div class="newsletter_title">Subscribe to newsletter</div>
-                        <div class="newsletter_form_container">
-                            <form action="#" class="newsletter_form" id="newsletter_form">
-                                <div class="d-flex flex-row align-items-start justify-content-start">
-                                    <input type="email" class="newsletter_input" placeholder="Your e-mail address"
-                                        required="required">
-                                    <button class="newsletter_button">Submit</button>
-                                </div>
-                            </form>
-                            <div class="newsletter_text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
                         </div>
                     </div>
                 </div>

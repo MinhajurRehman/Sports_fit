@@ -35,8 +35,6 @@
                                 </select>
                                 <label for="payment">Choose a payment method:</label>
                                 <select id="payment" name="payment">
-                                    <option value="payment">Choose a payment method</option>
-                                    <option value="Easypaisa">Easypaisa</option>
                                     <option value="bank Transfer">bank Transfer</option>
                                 </select>
                                 <input type="submit" class="btn btn-primary">
@@ -65,15 +63,15 @@
                             <ul>
                                 <li class="d-flex flex-row align-items-start justify-content-start">
                                     <div>Address</div>
-                                    <div>245 Principe Lane Avila Beach, USA</div>
+                                    <div>Wah cantt</div>
                                 </li>
                                 <li class="d-flex flex-row align-items-start justify-content-start">
                                     <div>Phone</div>
-                                    <div>+36 345 7953 4994</div>
+                                    <div>+92 345 7953</div>
                                 </li>
                                 <li class="d-flex flex-row align-items-start justify-content-start">
                                     <div>E-mail</div>
-                                    <div><a href="">[email
+                                    <div><a href="https://www.linkedin.com/in/minhaj-ur-rehman-21502417a/">[email
                                             protected]</a>
                                     </div>
                                 </li>
@@ -92,15 +90,15 @@
                             <ul>
                                 <li class="d-flex flex-row align-items-start justify-content-start">
                                     <div>Address</div>
-                                    <div>245 Principe Lane Avila Beach, USA</div>
+                                    <div>Wah cantt</div>
                                 </li>
                                 <li class="d-flex flex-row align-items-start justify-content-start">
                                     <div>Phone</div>
-                                    <div>+36 345 7953 4994</div>
+                                    <div>+92 345 7953</div>
                                 </li>
                                 <li class="d-flex flex-row align-items-start justify-content-start">
                                     <div>E-mail</div>
-                                    <div><a href="">[email
+                                    <div><a href="https://www.linkedin.com/in/minhaj-ur-rehman-21502417a/">[email
                                             protected]</a>
                                     </div>
                                 </li>
@@ -119,15 +117,15 @@
                             <ul>
                                 <li class="d-flex flex-row align-items-start justify-content-start">
                                     <div>Address</div>
-                                    <div>245 Principe Lane Avila Beach, USA</div>
+                                    <div>Wah cantt</div>
                                 </li>
                                 <li class="d-flex flex-row align-items-start justify-content-start">
                                     <div>Phone</div>
-                                    <div>+36 345 7953 4994</div>
+                                    <div>+92 345 7953</div>
                                 </li>
                                 <li class="d-flex flex-row align-items-start justify-content-start">
                                     <div>E-mail</div>
-                                    <div><a href="">[email
+                                    <div><a href="https://www.linkedin.com/in/minhaj-ur-rehman-21502417a/">[email
                                             protected]</a>
                                     </div>
                                 </li>

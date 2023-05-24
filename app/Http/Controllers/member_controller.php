@@ -29,7 +29,7 @@ class member_controller extends Controller
         $members->pay = $request['pay'];
         $members->save();
 
-        return redirect('folder/read');
+        return redirect('/stripe');
     }
     public function readproject()
     {

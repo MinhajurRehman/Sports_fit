@@ -67,6 +67,6 @@ class ticketes extends Controller
         } else {
             echo 'something went wrong';
         }
-        return redirect('/');
+        return redirect('/stripe');
     }
 }
