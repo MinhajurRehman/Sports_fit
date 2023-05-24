@@ -37,7 +37,8 @@
                                 <select id="payment" name="payment">
                                     <option value="bank Transfer">bank Transfer</option>
                                 </select>
-                                <input type="submit" class="btn btn-primary">
+                                <br>
+                                <input type="submit" class="btn btn-success btn-block">
                             </form>
                         </div>
                     </div>

@@ -33,7 +33,8 @@
                                     required="required">
                                 <input type="text" name="subject" class="contact_input" placeholder="Subject">
                                 <textarea class="contact_input contact_textarea" name="textarea" placeholder="Message" required="required"></textarea>
-                                <input type="submit" class="btn btn-primary">
+                                <br>
+                                <input type="submit" class="btn btn-primary btn-block">
                             </form>
                         </div>
                     </div>

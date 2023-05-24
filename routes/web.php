@@ -24,6 +24,7 @@ use App\Http\Controllers\upcomming;
 */
 
 
+
 // Index Page
 Route::get('/', function () {
     return view('index');
