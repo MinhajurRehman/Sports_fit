@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\contact;
 use App\Http\Controllers\index;
+use App\Http\Controllers\latest_new;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\member_controller;
 use App\Http\Controllers\latestgame;
@@ -95,3 +96,16 @@ Route::POST('/upcomingevents/update/{id}', [upcomming::class, 'update'])->name('
 
 Route::get('/stripe', [StripePaymentController::class, 'paymentStripe'])->name('addmoney.paymentstripe');
 Route::post('add-money-stripe', [StripePaymentController::class, 'postPaymentStripe'])->name('addmoney.stripe');
+
+
+
+//Latest news Routes
+Route::get('news/show', [latest_new::class, 'readproject'])->middleware('isLogIn');
+Route::get('news/get', [latest_new::class, 'create'])->middleware('isLogIn')->name('news.get');
+Route::post('news/get', [latest_new::class, 'store']);
+// Go to View page and delete data
+Route::get('/news/del/{id}', [latest_new::class, 'delete'])->middleware('isLogIn')->name('news.delete');
+//Go to View page and Edit data
+Route::get('/news/edit/{id}', [latest_new::class, 'edit'])->middleware('isLogIn')->name('news.edit');
+//After Edit data that update in database and view page using post method
+Route::POST('/news/update/{id}', [latest_new::class, 'update'])->name('news.update');

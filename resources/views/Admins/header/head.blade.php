@@ -68,6 +68,13 @@
                     <span>Upcoming Events</span></a>
             </li>
 
+            <!-- Nav Item - Forms -->
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url('news/get') }}">
+                    <i class="fas fa-fw fa-list"></i>
+                    <span>Latest News</span></a>
+            </li>
+
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -96,6 +103,13 @@
                 <a class="nav-link" href="{{ url('upcomingevents/show') }}">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Upcoming Event Data</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url('news/show') }}">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Latest news Data</span></a>
             </li>
 
             <!-- Divider -->
