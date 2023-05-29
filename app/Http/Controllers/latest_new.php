@@ -19,11 +19,11 @@ class latest_new extends Controller
     public function store(Request $request)
     {
         $img4 = $request->file('img4')->GetClientOriginalName();
-        $path = $request->file('img4')->storeAs('/img_4', $img4);
+        $path = $request->file('img4')->storeAs('/img4', $img4);
         //move uploaded file
         $request->img4->move(public_path('img4'), $img4);
         $latest_news  = new news;
-        $latest_news->img = $path;
+        $latest_news->img4 = $path;
         $latest_news->ltitle = $request['ltitle'];
         $latest_news->ldate = $request['ldate'];
         $latest_news->month = $request['month'];
@@ -71,7 +71,7 @@ class latest_new extends Controller
     public function update($id, Request $request)
     {
         $img4 = $request->file('img4')->GetClientOriginalName();
-        $path = $request->file('img4')->storeAs('/img_4', $img4);
+        $path = $request->file('img4')->storeAs('/img4', $img4);
         //move uploaded file
         $request->img4->move(public_path('img4'), $img4);
         $latest_news  = new news;
