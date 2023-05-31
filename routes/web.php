@@ -7,9 +7,11 @@ use App\Http\Controllers\latest_new;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\member_controller;
 use App\Http\Controllers\latestgame;
+use App\Http\Controllers\Store;
 use App\Http\Controllers\StripePaymentController;
 use App\Http\Controllers\ticketes;
 use App\Http\Controllers\upcomming;
+
 
 
 
@@ -109,3 +111,9 @@ Route::get('/news/del/{id}', [latest_new::class, 'delete'])->middleware('isLogIn
 Route::get('/news/edit/{id}', [latest_new::class, 'edit'])->middleware('isLogIn')->name('news.edit');
 //After Edit data that update in database and view page using post method
 Route::POST('/news/update/{id}', [latest_new::class, 'update'])->name('news.update');
+
+//Store Routing
+Route::get('/login', [Store::class, 'login']);
+Route::get('/Reg', [Store::class, 'Register']);
+Route::get('/int', [Store::class, 'interface']);
+Route::get('/info', [Store::class, 'information']);

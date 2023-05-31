@@ -306,96 +306,37 @@
                 </div>
             </div>
             <div class="row news_row">
-
-                <div class="col-lg-4">
-                    <div class="news_post">
-                        <div class="news_post_image">
-                            <img src="images/news_1.jpg" alt="">
-                            <div class="news_post_date">
-                                <a href="#">
-                                    <div class="d-flex flex-column align-items-center justify-content-center">
-                                        <div>10</div>
-                                        <div>sept</div>
-                                    </div>
-                                </a>
+                @foreach ($latest_news as $news)
+                    <div class="col-lg-4">
+                        <div class="news_post">
+                            <div class="news_post_image">
+                                <img src="{{ asset($news->img4) }}" alt="" height="200px" width="100%">
+                                <div class="news_post_date">
+                                    <a href="#">
+                                        <div class="d-flex flex-column align-items-center justify-content-center">
+                                            <div>{{ $news->ldate }}</div>
+                                            <div>{{ $news->month }}</div>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="news_post_content">
-                            <div class="tags">
-                                <ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
-                                    <li><a href="blog.html">News</a></li>
-                                </ul>
+                            <div class="news_post_content">
+                                <div class="tags">
+                                    <ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
+                                        <li><a href="blog.html">News</a></li>
+                                    </ul>
+                                </div>
+                                <div class="news_post_title"><a href="blog.html">{{ $news->ltitle }}</a></div>
+                                <div class="news_post_text">
+                                    <p>{{ $news->Bio }}</p>
+                                </div>
+                                <br>
+                                <div class="custom_list_link"><a href="{{ url('/tickets') }}">Buy Tickets</a></div>
                             </div>
-                            <div class="news_post_title"><a href="blog.html">T-shirt release date</a></div>
-                            <div class="news_post_text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan dolor id
-                                    enim lacinia, sed feugiat ex suscipit.</p>
-                            </div>
-                            <br>
-                            <div class="custom_list_link"><a href="#">Buy Tickets</a></div>
                         </div>
                     </div>
-                </div>
+                @endforeach
 
-                <div class="col-lg-4">
-                    <div class="news_post">
-                        <div class="news_post_image">
-                            <img src="images/news_2.jpg" alt="">
-                            <div class="news_post_date">
-                                <a href="#">
-                                    <div class="d-flex flex-column align-items-center justify-content-center">
-                                        <div>10</div>
-                                        <div>sept</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="news_post_content">
-                            <div class="tags">
-                                <ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
-                                    <li><a href="#">News</a></li>
-                                </ul>
-                            </div>
-                            <div class="news_post_title"><a href="blog.html">Junior league Openings</a></div>
-                            <div class="news_post_text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan dolor id
-                                    enim lacinia, sed feugiat ex suscipit.</p>
-                            </div>
-                            <br>
-                            <div class="custom_list_link"><a href="#">Buy Tickets</a></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="news_post">
-                        <div class="news_post_image">
-                            <img src="images/news_3.jpg" alt="">
-                            <div class="news_post_date">
-                                <a href="#">
-                                    <div class="d-flex flex-column align-items-center justify-content-center">
-                                        <div>10</div>
-                                        <div>sept</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="news_post_content">
-                            <div class="tags">
-                                <ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
-                                    <li><a href="blog.html">News</a></li>
-                                </ul>
-                            </div>
-                            <div class="news_post_title"><a href="blog.html">The summer transfers</a></div>
-                            <div class="news_post_text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan dolor id
-                                    enim lacinia, sed feugiat ex suscipit.</p>
-                            </div>
-                            <br>
-                            <div class="custom_list_link"><a href="#">Buy Tickets</a></div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
