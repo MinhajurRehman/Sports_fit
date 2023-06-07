@@ -12,6 +12,12 @@ class contact extends Controller
 {
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'email|required',
+            'subject' => 'required',
+            'textarea' => 'required'
+        ]);
         $contact_details = new ModelsContact;
         $contact_details->name = $request['name'];
         $contact_details->email = $request['email'];

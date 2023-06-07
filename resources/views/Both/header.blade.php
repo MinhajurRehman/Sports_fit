@@ -49,7 +49,7 @@
                                             <ul class="d-flex flex-row align-items-start justify-content-end">
                                                 <li class="active"><a href="{{ url('/') }}">home</a></li>
                                                 <li><a href="#about-section">about the club</a></li>
-                                                <li><a href="#join">join-club</a></li>
+                                                <li><a href="#join">Membership</a></li>
                                             </ul>
                                         </div>
                                         <div class="logo_container text-center">

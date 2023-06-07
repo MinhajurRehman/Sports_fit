@@ -27,6 +27,9 @@
                                     required="required">
                                 <input type="email" name="email" class="contact_input" placeholder="Mail"
                                     required="required">
+                                    <p style="color:red;">
+                                 *if you are member then enter your membership # otherwise dont fill it
+                                    </p>
                                 <input type="text" name="membership" class="contact_input" placeholder="Membership No">
                                 <label for="Event">Choose a event:</label>
                                 <select id="event" name="event">
