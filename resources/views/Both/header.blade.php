@@ -87,7 +87,7 @@
                                             <li><a href="{{ url('/tickets') }}"><i class="fa fa-ticket"
                                                         aria-hidden="true"></i> GET
                                                     Tickets</a></li>
-                                            <li><a href="{{ url('/Reg') }}"><i class="fa fa-shopping-bag"
+                                            <li><a href="{{ url('/login') }}"><i class="fa fa-shopping-bag"
                                                         aria-hidden="true"></i>
                                                     Store </a>
                                             </li>
@@ -141,7 +141,7 @@
                         <ul class="d-flex flex-row align-items-start justify-content-start">
                             <li><a href="{{ url('/tickets') }}"><i class="fa fa-ticket" aria-hidden="true"></i> GET
                                     Tickets</a></li>
-                            <li><a href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                            <li><a href="{{ url('/login') }}"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                     Store </a>
                             </li>
                         </ul>

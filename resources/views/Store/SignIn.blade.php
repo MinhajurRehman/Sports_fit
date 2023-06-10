@@ -27,21 +27,22 @@
                             <div class="signin-content">
                                 <div class="signin-image">
                                     <figure><img src="images/logo.png" alt=""></figure>
-                                    <a href="{{ url('/Reg') }}" class="signup-image-link">Create an account</a>
+                                    <a href="{{ url('/Register') }}" class="signup-image-link">Create an account</a>
                                 </div>
 
                                 <div class="signin-form">
                                     <h2 class="form-title">Sign In</h2>
-                                    <form method="POST" class="register-form" id="login-form">
+                                    <form method="post" action="{{ route('login-store') }}" class="register-form" id="login-form">
+                                        @csrf
                                         <div class="form-group">
                                             <label for="your_name"><i
                                                     class="zmdi zmdi-account material-icons-name"></i></label>
-                                            <input type="text" name="your_name" id="your_name"
+                                            <input type="text" name="name" id="your_name"
                                                 placeholder="Your Name" />
                                         </div>
                                         <div class="form-group">
                                             <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
-                                            <input type="password" name="your_pass" id="your_pass"
+                                            <input type="password" name="pass" id="your_pass"
                                                 placeholder="Password" />
                                         </div>
                                         <div class="form-group">
@@ -55,8 +56,8 @@
                                             <input type="submit" name="signin" id="signin" class="form-submit"
                                                 value="Log in" />
                                         </div>
-                                    </form>
-                                    <div class="social-login">
+
+                                     <div class="social-login">
                                         <span class="social-label">Or login with</span>
                                         <ul class="socials">
                                             <li><a href="#"><i
@@ -67,6 +68,7 @@
                                                         class="display-flex-center zmdi zmdi-google"></i></a></li>
                                         </ul>
                                     </div>
+                                </form>
                                 </div>
                             </div>
                         </div>

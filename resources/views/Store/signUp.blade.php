@@ -31,7 +31,9 @@
                             <div class="signup-content">
                                 <div class="signup-form">
                                     <h2 class="form-title">Sign up</h2>
-                                    <form method="POST" class="register-form" id="register-form">
+
+                                    <form method="post" class="register-form" id="register-form">
+                                        @csrf
                                         <div class="form-group">
                                             <label for="name"><i
                                                     class="zmdi zmdi-account material-icons-name"></i></label>
@@ -54,7 +56,7 @@
                                                 placeholder="Repeat your password" />
                                         </div>
                                         <div class="form-group">
-                                            <input type="checkbox" name="agree-term" id="agree-term"
+                                            <input type="checkbox" name="agreeterm" id="agree-term"
                                                 class="agree-term" />
                                             <label for="agree-term" class="label-agree-term"><span><span></span></span>I
                                                 agree

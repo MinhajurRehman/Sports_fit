@@ -59,7 +59,7 @@ Route::post('/contact', [contact::class, 'store']);
 // Admin Dashboard
 Route::get('/Admins/Dashboard', [AdminController::class, 'Dashboard'])->middleware('isLogIn');
 
-//fetch layout index data from database
+//fetch layout index data from databaseE
 Route::get('/', [index::class, 'Dashboard']);
 
 //Membership Routes
@@ -114,6 +114,8 @@ Route::POST('/news/update/{id}', [latest_new::class, 'update'])->name('news.upda
 
 //Store Routing
 Route::get('/login', [Store::class, 'login']);
-Route::get('/Reg', [Store::class, 'Register']);
+Route::get('/Register', [Store::class, 'Register']);
+Route::post('/Register', [Store::class, 'Registration']);
+Route::post('login-store', [Store::class, 'loginstore'])->name('login-store');
 Route::get('/int', [Store::class, 'interface']);
 Route::get('/info', [Store::class, 'information']);
