@@ -112,8 +112,35 @@
                     <span>Latest news Data</span></a>
             </li>
 
+
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
+
+              <!-- Heading -->
+            <div class="sidebar-heading">
+              Store
+            </div>
+
+              <!-- Nav Item - Tables -->
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url('news/show') }}">
+                    <i class="fas fa-fw fa-list"></i>
+                    <span>Products</span></a>
+            </li>
+
+             <!-- Divider -->
+             <hr class="sidebar-divider d-none d-md-block">
+
+            <div class="sidebar-heading">
+                Store Show Data
+              </div>
+
+               <!-- Nav Item - Tables -->
+               <li class="nav-item">
+                <a class="nav-link" href="{{ url('news/show') }}">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>list of Products</span></a>
+            </li>
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">

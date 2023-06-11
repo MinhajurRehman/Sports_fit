@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\product;
 use App\Models\stores;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Session;
+
 class Store extends Controller
 {
     public function login()
@@ -25,6 +27,7 @@ class Store extends Controller
         return view('Store.Information');
     }
 
+    // Registration save data function
     public function Registration(Request $request)
     {
         $request->validate([
@@ -50,6 +53,7 @@ class Store extends Controller
             return back()->with('fail', 'something went wrong');
         }
     }
+    // Login Function
     public function loginstore(Request $request)
     {
         $request->validate([
@@ -68,4 +72,34 @@ class Store extends Controller
             return back()->with('fail', 'You are not registered');
         }
     }
+
+    // products store function
+    public function index()
+    {
+        $products = new product;   // variable define
+        $url = url('/product/get');
+        $title = "Products Entries";
+        $data = compact('url', 'title', 'products');
+        return view('Admins.Store.Products')->with($data);
+    }
+
+    public function save(Request $request)
+    {
+        $product = $request->file('product')->GetClientOriginalName();
+        $path = $request->file('product')->storeAs('/product', $product);
+        //move uploaded file
+        $request->product->move(public_path('product'), $product);
+        $products = new product;
+        $products->product = $path;
+        $products->productname = $request['productname'];
+        $products->productprice = $request['productprice'];
+        $products->save();
+
+        return redirect('product/show');
+    }
+
+
+
+
+
 }

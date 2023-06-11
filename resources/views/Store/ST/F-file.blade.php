@@ -1,135 +1,168 @@
- <!-- Footer -->
- <footer class="text-center text-lg-start bg-light text-muted">
-     <!-- Section: Social media -->
-     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-         <!-- Left -->
-         <div class="me-5 d-none d-lg-block">
-             <span>Get connected with us on social networks:</span>
-         </div>
-         <!-- Left -->
+<footer id="footer"><!--Footer-->
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="companyinfo">
+                        <h2><span>sports</span>-fit</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor</p>
+                    </div>
+                </div>
+                <div class="col-sm-7">
+                    <div class="col-sm-3">
+                        <div class="video-gallery text-center">
+                            <a href="#">
+                                <div class="iframe-img">
+                                    <img src="Store/images/home/iframe1.png" alt="" />
+                                </div>
+                                <div class="overlay-icon">
+                                    <i class="fa fa-play-circle-o"></i>
+                                </div>
+                            </a>
+                            <p>Circle of Hands</p>
+                            <h2>24 DEC 2014</h2>
+                        </div>
+                    </div>
 
-         <!-- Right -->
-         <div>
-             <a href="" class="me-4 text-reset">
-                 <i class="fab fa-facebook-f"></i>
-             </a>
-             <a href="" class="me-4 text-reset">
-                 <i class="fab fa-twitter"></i>
-             </a>
-             <a href="" class="me-4 text-reset">
-                 <i class="fab fa-google"></i>
-             </a>
-             <a href="" class="me-4 text-reset">
-                 <i class="fab fa-instagram"></i>
-             </a>
-             <a href="" class="me-4 text-reset">
-                 <i class="fab fa-linkedin"></i>
-             </a>
-             <a href="" class="me-4 text-reset">
-                 <i class="fab fa-github"></i>
-             </a>
-         </div>
-         <!-- Right -->
-     </section>
-     <!-- Section: Social media -->
+                    <div class="col-sm-3">
+                        <div class="video-gallery text-center">
+                            <a href="#">
+                                <div class="iframe-img">
+                                    <img src="Store/images/home/iframe2.png" alt="" />
+                                </div>
+                                <div class="overlay-icon">
+                                    <i class="fa fa-play-circle-o"></i>
+                                </div>
+                            </a>
+                            <p>Circle of Hands</p>
+                            <h2>24 DEC 2014</h2>
+                        </div>
+                    </div>
 
-     <!-- Section: Links  -->
-     <section class="">
-         <div class="container text-center text-md-start mt-5">
-             <!-- Grid row -->
-             <div class="row mt-3">
-                 <!-- Grid column -->
-                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                     <!-- Content -->
-                     <h6 class="text-uppercase fw-bold mb-4">
-                         <i class="fas fa-gem me-3"></i>Company name
-                     </h6>
-                     <p>
-                         Here you can use rows and columns to organize your footer content. Lorem ipsum
-                         dolor sit amet, consectetur adipisicing elit.
-                     </p>
-                 </div>
-                 <!-- Grid column -->
+                    <div class="col-sm-3">
+                        <div class="video-gallery text-center">
+                            <a href="#">
+                                <div class="iframe-img">
+                                    <img src="Store/images/home/iframe3.png" alt="" />
+                                </div>
+                                <div class="overlay-icon">
+                                    <i class="fa fa-play-circle-o"></i>
+                                </div>
+                            </a>
+                            <p>Circle of Hands</p>
+                            <h2>24 DEC 2014</h2>
+                        </div>
+                    </div>
 
-                 <!-- Grid column -->
-                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                     <!-- Links -->
-                     <h6 class="text-uppercase fw-bold mb-4">
-                         Products
-                     </h6>
-                     <p>
-                         <a href="#!" class="text-reset">Angular</a>
-                     </p>
-                     <p>
-                         <a href="#!" class="text-reset">React</a>
-                     </p>
-                     <p>
-                         <a href="#!" class="text-reset">Vue</a>
-                     </p>
-                     <p>
-                         <a href="#!" class="text-reset">Laravel</a>
-                     </p>
-                 </div>
-                 <!-- Grid column -->
+                    <div class="col-sm-3">
+                        <div class="video-gallery text-center">
+                            <a href="#">
+                                <div class="iframe-img">
+                                    <img src="Store/images/home/iframe4.png" alt="" />
+                                </div>
+                                <div class="overlay-icon">
+                                    <i class="fa fa-play-circle-o"></i>
+                                </div>
+                            </a>
+                            <p>Circle of Hands</p>
+                            <h2>24 DEC 2014</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="address">
+                        <img src="Store/images/home/map.png" alt="" />
+                        <p>505 S Atlantic Ave Virginia Beach, VA(Virginia)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                 <!-- Grid column -->
-                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                     <!-- Links -->
-                     <h6 class="text-uppercase fw-bold mb-4">
-                         Useful links
-                     </h6>
-                     <p>
-                         <a href="#!" class="text-reset">Pricing</a>
-                     </p>
-                     <p>
-                         <a href="#!" class="text-reset">Settings</a>
-                     </p>
-                     <p>
-                         <a href="#!" class="text-reset">Orders</a>
-                     </p>
-                     <p>
-                         <a href="#!" class="text-reset">Help</a>
-                     </p>
-                 </div>
-                 <!-- Grid column -->
+    <div class="footer-widget">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="single-widget">
+                        <h2>Service</h2>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="#">Online Help</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Order Status</a></li>
+                            <li><a href="#">Change Location</a></li>
+                            <li><a href="#">FAQ’s</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="single-widget">
+                        <h2>Quock Shop</h2>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="#">T-Shirt</a></li>
+                            <li><a href="#">Mens</a></li>
+                            <li><a href="#">Womens</a></li>
+                            <li><a href="#">Gift Cards</a></li>
+                            <li><a href="#">Shoes</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="single-widget">
+                        <h2>Policies</h2>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Privecy Policy</a></li>
+                            <li><a href="#">Refund Policy</a></li>
+                            <li><a href="#">Billing System</a></li>
+                            <li><a href="#">Ticket System</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="single-widget">
+                        <h2>About Shopper</h2>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="#">Company Information</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Store Location</a></li>
+                            <li><a href="#">Affillate Program</a></li>
+                            <li><a href="#">Copyright</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-sm-offset-1">
+                    <div class="single-widget">
+                        <h2>About Shopper</h2>
+                        <form action="#" class="searchform">
+                            <input type="text" placeholder="Your email address" />
+                            <button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
+                            <p>Get the most recent updates from <br />our site and be updated your self...</p>
+                        </form>
+                    </div>
+                </div>
 
-                 <!-- Grid column -->
-                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                     <!-- Links -->
-                     <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                     <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
-                     <p>
-                         <i class="fas fa-envelope me-3"></i>
-                         info@example.com
-                     </p>
-                     <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-                     <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
-                 </div>
-                 <!-- Grid column -->
-             </div>
-             <!-- Grid row -->
-         </div>
-     </section>
-     <!-- Section: Links  -->
+            </div>
+        </div>
+    </div>
 
-     <!-- Copyright -->
-     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-         © 2021 Copyright:
-         <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-     </div>
-     <!-- Copyright -->
- </footer>
- <!-- Footer -->
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
- </script>
- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
- </script>
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
- </script>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
+                <p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a></span></p>
+            </div>
+        </div>
+    </div>
 
- </body>
+</footer><!--/Footer-->
 
- </html>
+
+
+<script src="Store/js/jquery.js"></script>
+<script src="Store/js/bootstrap.min.js"></script>
+<script src="Store/js/jquery.scrollUp.min.js"></script>
+<script src="Store/js/price-range.js"></script>
+<script src="Store/js/jquery.prettyPhoto.js"></script>
+<script src="Store/js/main.js"></script>
+</body>
+</html>

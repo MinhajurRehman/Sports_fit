@@ -95,7 +95,7 @@ Route::get('/upcomingevents/edit/{id}', [upcomming::class, 'edit'])->middleware(
 //After Edit data that update in database and view page using post method
 Route::POST('/upcomingevents/update/{id}', [upcomming::class, 'update'])->name('upcomming.update');
 
-
+// payment Gateways route
 Route::get('/stripe', [StripePaymentController::class, 'paymentStripe'])->name('addmoney.paymentstripe');
 Route::post('add-money-stripe', [StripePaymentController::class, 'postPaymentStripe'])->name('addmoney.stripe');
 
@@ -112,6 +112,19 @@ Route::get('/news/edit/{id}', [latest_new::class, 'edit'])->middleware('isLogIn'
 //After Edit data that update in database and view page using post method
 Route::POST('/news/update/{id}', [latest_new::class, 'update'])->name('news.update');
 
+
+// Products
+Route::get('product/show', [Store::class, 'readproject']);
+Route::get('product/get', [Store::class, 'index'])->name('product.get');
+Route::post('product/get', [Store::class, 'save']);
+// Go to View page and delete data
+Route::get('/product/del/{id}', [Store::class, 'delete'])->name('product.delete');
+//Go to View page and Edit data
+Route::get('/product/edit/{id}', [Store::class, 'edit'])->name('product.edit');
+//After Edit data that update in database and view page using post method
+Route::POST('/product/update/{id}', [Store::class, 'update'])->name('product.update');
+
+
 //Store Routing
 Route::get('/login', [Store::class, 'login']);
 Route::get('/Register', [Store::class, 'Register']);
@@ -119,3 +132,5 @@ Route::post('/Register', [Store::class, 'Registration']);
 Route::post('login-store', [Store::class, 'loginstore'])->name('login-store');
 Route::get('/int', [Store::class, 'interface']);
 Route::get('/info', [Store::class, 'information']);
+
+
