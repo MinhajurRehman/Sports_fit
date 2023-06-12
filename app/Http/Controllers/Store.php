@@ -18,10 +18,18 @@ class Store extends Controller
     {
         return view('Store.signUp');
     }
+
+
+
     public function interface()
     {
-        return view('Store.Interface');
+        $products = product::orderBy('id', 'desc')->take(6)->get();
+        return view('Store.Interface')
+        ->with(['products' => $products]);
     }
+
+
+
     public function information()
     {
         return view('Store.Information');
@@ -98,7 +106,52 @@ class Store extends Controller
         return redirect('product/show');
     }
 
+    public function read()
+    {
 
+        $products = product::all();
+        return view("Admins.Store.Show-product")
+            ->with(['products' => $products]);
+    }
+
+    public function delete($id)
+    {
+        $products = product::find($id);
+        if (!is_null($products)) {
+            $products->delete();
+        }
+        return redirect('product/show');
+    }
+
+    public function edit($id)
+    {
+        $products = product::find($id);
+        if (is_null($products)) {
+            //not found
+            return redirect('product/get');
+        } else {
+            //found
+            $title = "Update Products Entries";
+            $url = url('/product/update') . "/" . $id;
+            $data = compact('products', 'url', 'title');
+            return view('Admins.Upcoming.enter')->with($data);
+        }
+    }
+
+    public function update($id, Request $request)
+    {
+        $product = $request->file('product')->GetClientOriginalName();
+        //move uploaded file
+        $request->img->move(public_path('product'), $product);
+        $products = new product;
+        $products->product = $request['product'];
+        $products->productname = $request['productname'];
+        $products->productprice = $request['productprice'];
+        $products->save();
+
+        return redirect('product/show');
+
+    }
 
 
 

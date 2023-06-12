@@ -1,17 +1,5 @@
 @extends('Both.abc')
 @section('main-container')
-    <div class="home d-flex flex-column align-items-start justify-content-end">
-        <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/contact.jpg"
-            data-speed="0.8"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col text-center">
-                    <div class="home_text"><span>tickets</span></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="contact">
         <div class="container">
             <div class="row">

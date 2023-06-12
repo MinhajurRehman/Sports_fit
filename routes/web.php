@@ -114,13 +114,13 @@ Route::POST('/news/update/{id}', [latest_new::class, 'update'])->name('news.upda
 
 
 // Products
-Route::get('product/show', [Store::class, 'readproject']);
-Route::get('product/get', [Store::class, 'index'])->name('product.get');
+Route::get('product/show', [Store::class, 'read'])->middleware('isLogIn');
+Route::get('product/get', [Store::class, 'index'])->middleware('isLogIn')->name('product.get');
 Route::post('product/get', [Store::class, 'save']);
 // Go to View page and delete data
-Route::get('/product/del/{id}', [Store::class, 'delete'])->name('product.delete');
+Route::get('/product/del/{id}', [Store::class, 'delete'])->middleware('isLogIn')->name('product.delete');
 //Go to View page and Edit data
-Route::get('/product/edit/{id}', [Store::class, 'edit'])->name('product.edit');
+Route::get('/product/edit/{id}', [Store::class, 'edit'])->middleware('isLogIn')->name('product.edit');
 //After Edit data that update in database and view page using post method
 Route::POST('/product/update/{id}', [Store::class, 'update'])->name('product.update');
 
@@ -132,5 +132,4 @@ Route::post('/Register', [Store::class, 'Registration']);
 Route::post('login-store', [Store::class, 'loginstore'])->name('login-store');
 Route::get('/int', [Store::class, 'interface']);
 Route::get('/info', [Store::class, 'information']);
-
 

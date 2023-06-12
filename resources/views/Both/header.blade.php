@@ -149,3 +149,122 @@
                 </div>
             </div>
         </div>
+
+        <div class="home">
+
+            <div class="home_slider_container">
+                <div class="owl-carousel owl-theme home_slider">
+
+                    <div class="home_slide">
+                        <div class="background_image" style="background-image:url(images/index.jpg)"></div>
+                        <div class="home_container">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-10">
+                                        <div class="home_content" data-animation-in="zoomInDown"
+                                            data-animation-out="animate-out fadeOut">
+                                            <div class="home_text d-flex flex-row align-items-center justify-content-start">
+                                                <div>2</div>
+                                                <span>days until the next match</span>
+                                            </div>
+                                            <div class="next_match">
+                                                <div>
+                                                    <div class="next_match_home">
+                                                        <a href="#">The Tigers</a>
+                                                    </div>
+                                                    <div class="next_match_guest">
+                                                        <a href="#">The Bears</a>
+                                                    </div>
+                                                </div>
+                                                <div class="vs">vs</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="home_slide">
+                        <div class="background_image" style="background-image:url(images/index.jpg)"></div>
+                        <div class="home_container">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-10">
+                                        <div class="home_content" data-animation-in="zoomInDown"
+                                            data-animation-out="animate-out fadeOut">
+                                            <div class="home_text d-flex flex-row align-items-center justify-content-start">
+                                                <div>2</div>
+                                                <span>days until the next match</span>
+                                            </div>
+                                            <div class="next_match">
+                                                <div>
+                                                    <div class="next_match_home">
+                                                        <a href="#">The Tigers</a>
+                                                    </div>
+                                                    <div class="next_match_guest">
+                                                        <a href="#">The Bears</a>
+                                                    </div>
+                                                </div>
+                                                <div class="vs">vs</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="home_slide">
+                        <div class="background_image" style="background-image:url(images/index.jpg)"></div>
+                        <div class="home_container">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-10">
+                                        <div class="home_content" data-animation-in="zoomInDown"
+                                            data-animation-out="animate-out fadeOut">
+                                            <div class="home_text d-flex flex-row align-items-center justify-content-start">
+                                                <div>2</div>
+                                                <span>days until the next match</span>
+                                            </div>
+                                            <div class="next_match">
+                                                <div>
+                                                    <div class="next_match_home">
+                                                        <a href="#">The Tigers</a>
+                                                    </div>
+                                                    <div class="next_match_guest">
+                                                        <a href="#">The Bears</a>
+                                                    </div>
+                                                </div>
+                                                <div class="vs">vs</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="home_slider_nav">
+                    <i class="fa fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="breaking_news d-flex flex-row align-items-start justify-content-start">
+            <div class="breaking_news_title text-right">Breaking News</div>
+            <div class="breaking_news_content">
+                <div class="breaking_news_slider_container">
+                    <div class="owl-carousel owl-theme breaking_news_slider">
+
+                        <div class="breaking_news_slide">Pellentesque enim nunc, vehicula in massa quis, consectetur
+                            tempus nulla</div>
+
+                        <div class="breaking_news_slide">Enim nunc, vehicula in massa quis, consectetur tempus</div>
+
+                        <div class="breaking_news_slide">Vehicula in massa quis, consectetur tempus nulla. Pellentesque
+                            enim nunc</div>
+                    </div>
+                </div>
+            </div>
+        </div>

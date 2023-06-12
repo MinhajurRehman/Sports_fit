@@ -123,7 +123,7 @@
 
               <!-- Nav Item - Tables -->
               <li class="nav-item">
-                <a class="nav-link" href="{{ url('news/show') }}">
+                <a class="nav-link" href="{{ url('product/get') }}">
                     <i class="fas fa-fw fa-list"></i>
                     <span>Products</span></a>
             </li>
@@ -137,7 +137,7 @@
 
                <!-- Nav Item - Tables -->
                <li class="nav-item">
-                <a class="nav-link" href="{{ url('news/show') }}">
+                <a class="nav-link" href="{{ url('product/show') }}">
                     <i class="fas fa-fw fa-table"></i>
                     <span>list of Products</span></a>
             </li>
