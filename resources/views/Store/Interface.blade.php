@@ -221,7 +221,7 @@
                                         <img src="{{ asset($product->product) }}" height="200px" />
                                         <h2>{{ $product->productprice }}</h2>
                                         <p>{{ $product->productname }}</p>
-                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Buy</a>
+                                        <a href="{{ route('store.Buy', ['id' => $product->id]) }}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Buy</a>
                                     </div>
                             </div>
                             <div class="choose">

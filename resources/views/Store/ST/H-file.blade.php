@@ -6,19 +6,19 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Home | E-Shopper</title>
-    <link href="Store/css/bootstrap.min.css" rel="stylesheet">
-    <link href="Store/css/font-awesome.min.css" rel="stylesheet">
-    <link href="Store/css/prettyPhoto.css" rel="stylesheet">
-    <link href="Store/css/price-range.css" rel="stylesheet">
-    <link href="Store/css/animate.css" rel="stylesheet">
-	<link href="Store/css/main.css" rel="stylesheet">
-	<link href="Store/css/responsive.css" rel="stylesheet">
+    <link href="{{ url('Store/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url('Store/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ url('Store/css/prettyPhoto.css') }}" rel="stylesheet">
+    <link href="{{ url('Store/css/price-range.css') }}" rel="stylesheet">
+    <link href="{{ url('Store/css/animate.css') }}" rel="stylesheet">
+	<link href="{{ url('Store/css/main.css') }}" rel="stylesheet">
+	<link href="{{ url('Store/css/responsive.css') }}" rel="stylesheet">
 
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="Store/images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="Store/images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="Store/images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="Store/images/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="{{ url('images/ico/favicon.ico') }}">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ url('Store/images/ico/apple-touch-icon-144-precomposed.png') }}">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ url('Store/images/ico/apple-touch-icon-114-precomposed.png') }}">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ url('Store/images/ico/apple-touch-icon-72-precomposed.png') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ url('Store/images/ico/apple-touch-icon-57-precomposed.png') }}">
 </head><!--/head-->
 
 <body>
@@ -54,7 +54,7 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="index.html"><img src="Store/images/home/logo.png" alt="" height="120px"/></a>
+							<a href="index.html"><img src="{{ url('Store/images/home/logo.png') }}" alt="" height="120px"/></a>
 						</div>
 						<div class="btn-group pull-right">
 							<div class="btn-group">

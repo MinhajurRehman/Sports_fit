@@ -131,5 +131,6 @@ Route::get('/Register', [Store::class, 'Register']);
 Route::post('/Register', [Store::class, 'Registration']);
 Route::post('login-store', [Store::class, 'loginstore'])->name('login-store');
 Route::get('/int', [Store::class, 'interface']);
-Route::get('/info', [Store::class, 'information']);
-
+Route::get('', [Store::class, 'information']);
+//Store Product fetch by id on inforamtion page from the help of this route
+Route::get('/info/Buy/{id}', [Store::class, 'Buy'])->name('store.Buy');

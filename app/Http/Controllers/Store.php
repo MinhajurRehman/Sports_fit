@@ -32,7 +32,9 @@ class Store extends Controller
 
     public function information()
     {
-        return view('Store.Information');
+        $products = product::all();
+        return view('Store.Information')
+        ->with(['products' => $products]);
     }
 
     // Registration save data function
@@ -153,6 +155,18 @@ class Store extends Controller
 
     }
 
-
+    public function Buy($id)
+    {
+        $products  = product::find($id);
+        if (is_null($products)) {
+            //not found
+            return redirect('/int');
+        } else {
+            //found
+            $url = url('/info') . "/" . $id;
+            $data = compact('products', 'url');
+            return view('Store.Information')->with($data);
+        }
+    }
 
 }

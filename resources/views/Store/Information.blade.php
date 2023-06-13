@@ -4,12 +4,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                Product image
-                <img src="">
+                <img src="{{ asset($products->product) }}" height="30px" />
             </div>
             <div class="col-md-6">
-                <h1>Product Name</h1>
-                <span>Product Price</span>
+                <h1>{{ $products->productname }}</h1>
+                <span>{{ $products->productprice }}</span>
                 <p>Product Description</p>
             </div>
         </div>
@@ -40,23 +39,9 @@
                         </select>
                         <label for="payment">Show Package payment:</label>
                         <input type="text" name="pay" id="payment" readonly>
-                        <input type="submit" class="btn btn-default" value="Submit">
+                        <input type="submit" class="btn btn-default" value="Go to Payment Process">
 
                     </form>
-                    <script>
-                        function calculatePayment() {
-                            var plan = document.getElementById("plan").value;
-                            var paymentField = document.getElementById("payment");
-
-                            if (plan === "standard") {
-                                paymentField.value = "Rs. 5,000";
-                            } else if (plan === "premium") {
-                                paymentField.value = "Rs. 10,000";
-                            } else if (plan === "Basic") {
-                                paymentField.value = "Rs. 2,500";
-                            }
-                        }
-                    </script>
                 </div>
             <div class="col-md-4">
                         <h4><strong>Your Order</strong></h4>
