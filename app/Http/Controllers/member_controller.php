@@ -20,6 +20,15 @@ class member_controller extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'plan' => 'required',
+            'name' => 'required',
+            'address' => 'required',
+            'contact' => 'required',
+            'payment_method' => 'required',
+            'pay' => 'required',
+        ]);
+
         $members = new member;
         $members->plan = $request['plan'];
         $members->name = $request['name'];

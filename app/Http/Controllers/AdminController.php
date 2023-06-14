@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Admin;
+use App\Models\bill;
 use App\Models\contact;
 use App\Models\member;
 use App\Models\ticket;
@@ -89,5 +90,13 @@ class AdminController extends Controller
             Session::pull('LoginId');
             return redirect('/Admins/Login');
         }
+    }
+
+    public function review()
+    {
+        $billing = new bill;
+        $billing = bill::all();
+        return view("Admins.Store.Show-bills")
+            ->with(['billing' => $billing]);
     }
 }

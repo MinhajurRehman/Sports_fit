@@ -26,4 +26,20 @@ class index extends Controller
             ->with('upcoming_events', $upcoming_events)
             ->with('latest_news', $latest_news);
     }
+
+     public function Tickets()
+    {
+        return view('Tickets');
+    }
+
+      public function contact()
+    {
+        return view('contact');
+    }
+
+      public function index()
+    {
+        return view('index');
+    }
+
 }

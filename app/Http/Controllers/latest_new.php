@@ -18,6 +18,13 @@ class latest_new extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'img4' => 'required',
+            'ltitle' => 'required',
+            'ldate' => 'required',
+            'month' => 'required',
+            'Bio' => 'required',
+        ]);
         $img4 = $request->file('img4')->GetClientOriginalName();
         $path = $request->file('img4')->storeAs('/img4', $img4);
         //move uploaded file

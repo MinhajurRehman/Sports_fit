@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\bill;
 use App\Models\product;
 use App\Models\stores;
 use Illuminate\Http\Request;
@@ -73,8 +74,8 @@ class Store extends Controller
         $store_details = stores::where('name', '=', $request->name)->first();
         if ($store_details) {
             if (Hash::check($request['pass'], $store_details->pass)) {
-                $request->session()->put('LoginId', $store_details->id);
-                return redirect('/');
+                $request->session()->put('Basic', $store_details->id);
+                return redirect('/int');
             } else {
                 return back()->with('fail', 'match does not match');
             }
@@ -103,6 +104,7 @@ class Store extends Controller
         $products->product = $path;
         $products->productname = $request['productname'];
         $products->productprice = $request['productprice'];
+        $products->Description = $request['Description'];
         $products->save();
 
         return redirect('product/show');
@@ -168,5 +170,27 @@ class Store extends Controller
             return view('Store.Information')->with($data);
         }
     }
+
+   public function storage(Request $request){
+    $billing = new bill;
+    $billing->name = $request['name'];
+    $billing->email = $request['email'];
+    $billing->contact = $request['contact'];
+    $billing->Pname = $request['Pname'];
+    $billing->Pprice = $request['Pprice'];
+    $billing->payment_method = $request['payment_method'];
+    $billing->save();
+
+    return redirect('/stripe');
+   }
+
+      public function Logout()
+    {
+        if (Session::has('Basic')) {
+            Session::pull('Basic');
+            return redirect('/login');
+        }
+    }
+
 
 }

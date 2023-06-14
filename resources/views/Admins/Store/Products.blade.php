@@ -10,6 +10,7 @@
     <input type="file" id="product" name="product">
     <input type="text" id="productname" name="productname" placeholder="Name of Product">
     <input type="text" id="productprice" name="productprice" placeholder="Price of product">
+    <textarea class="contact_input contact_textarea" name="Description" placeholder="Product Description ... "></textarea>
     <input type="submit" value="submit">
 
 

@@ -26,6 +26,7 @@
                 <th><b>product image</b></th>
                 <th><b>product name</b></th>
                 <th><b>product price</b></th>
+                <th><b>product Description</b></th>
                 <th><b>Delete</b></th>
                 <th><b>Edit</b></th>
             </tr>
@@ -38,6 +39,7 @@
                 <td><img src="{{ asset($product->product) }}" height="30px"></td>
                 <td>{{ $product->productname }}</td>
                 <td>{{ $product->productprice }}</td>
+                <td>{{ $product->Description }}</td>
                 <td>
                     <a href="{{ route('product.delete', ['id' => $product->id]) }}"><button
                             class="btn btn-danger">Delete</button></a>

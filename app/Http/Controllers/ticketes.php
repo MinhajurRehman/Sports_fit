@@ -12,6 +12,13 @@ class ticketes extends Controller
 {
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'membership' => 'required',
+            'event' => 'required',
+            'payment' => 'required',
+        ]);
         $ticket_details = new ticket;
         $ticket_details->name = $request['name'];
         $ticket_details->email = $request['email'];

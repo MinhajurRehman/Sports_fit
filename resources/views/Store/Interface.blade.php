@@ -226,7 +226,8 @@
                             </div>
                             <div class="choose">
                                 <ul class="nav nav-pills nav-justified">
-                                    <li><a href="#"><i class="fa fa-plus-square"></i>See Product Information</a></li>
+                                    <li><a href="#">Good <i class="fa fa-thumbs-up"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-thumbs-down"> Bad</i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -255,7 +256,7 @@
                                             <img src="{{ asset($product->product) }}" height="120px" />
                                             <h2>{{ $product->productprice }}</h2>
                                             <p>{{ $product->productname }}</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>BUY</a>
+                                            <a href="{{ route('store.Buy', ['id' => $product->id]) }}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>BUY</a>
                                         </div>
 
                                     </div>
@@ -273,7 +274,7 @@
                                             <img src="{{ asset($product->product) }}" height="120px" />
                                             <h2>{{ $product->productprice }}</h2>
                                             <p>{{ $product->productname }}</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>BUY</a>
+                                            <a href="{{ route('store.Buy', ['id' => $product->id]) }}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>BUY</a>
                                         </div>
 
                                     </div>
@@ -291,7 +292,7 @@
                                             <img src="{{ asset($product->product) }}" height="120px" />
                                             <h2>{{ $product->productprice }}</h2>
                                             <p>{{ $product->productname }}</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>BUY</a>
+                                            <a href="{{ route('store.Buy', ['id' => $product->id]) }}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>BUY</a>
                                         </div>
 
                                     </div>
@@ -309,7 +310,7 @@
                                             <img src="{{ asset($product->product) }}" height="120px" />
                                             <h2>{{ $product->productprice }}</h2>
                                             <p>{{ $product->productname }}</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>BUY</a>
+                                            <a href="{{ route('store.Buy', ['id' => $product->id]) }}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>BUY</a>
                                         </div>
 
                                     </div>
@@ -327,7 +328,7 @@
                                             <img src="{{ asset($product->product) }}" height="120px" />
                                             <h2>{{ $product->productprice }}</h2>
                                             <p>{{ $product->productname }}</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>BUY</a>
+                                            <a href="{{ route('store.Buy', ['id' => $product->id]) }}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>BUY</a>
                                         </div>
 
                                     </div>
@@ -353,7 +354,7 @@
                                             <img src="{{ asset($product->product) }}" height="110px"/>
                                             <h2>{{ $product->productprice }}</h2>
                                             <p>{{ $product->productname }}</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>BUY</a>
+                                            <a href="{{ route('store.Buy', ['id' => $product->id]) }}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>BUY</a>
                                         </div>
                                         </div>
                                     </div>

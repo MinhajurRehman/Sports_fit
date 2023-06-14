@@ -20,6 +20,12 @@ class upcomming extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'img' => 'required',
+            'eventtitle' => 'required',
+            'eventdate' => 'required',
+        ]);
+
         $img = $request->file('img')->GetClientOriginalName();
         $path = $request->file('img')->storeAs('/img', $img);
         //move uploaded file

@@ -1,5 +1,31 @@
 @extends('Both.abc')
 @section('main-container')
+<div class="home">
+
+    <div class="home_slider_container">
+        <div class="owl-carousel owl-theme home_slider">
+
+            <div class="home_slide">
+                <div class="background_image" style="background-image:url(images/index.jpg)"></div>
+                <div class="home_container">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-10">
+                                <div class="home_content" data-animation-in="zoomInDown"
+                                    data-animation-out="animate-out fadeOut">
+                                    <div class="home_text d-flex flex-row align-items-center justify-content-start">
+                                        <div>1</div>
+                                        <span>CONTACT US</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     <div class="contact">
         <div class="container">
             <div class="row">

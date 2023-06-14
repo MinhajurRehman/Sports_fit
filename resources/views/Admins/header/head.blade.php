@@ -142,6 +142,13 @@
                     <span>list of Products</span></a>
             </li>
 
+             <!-- Nav Item - Tables -->
+             <li class="nav-item">
+                <a class="nav-link" href="{{ url('store/bill') }}">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>list of Billings</span></a>
+            </li>
+
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>

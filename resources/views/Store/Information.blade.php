@@ -4,50 +4,46 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <img src="{{ asset($products->product) }}" height="30px" />
+                <img src="{{ asset($products->product) }}" height="200px" />
             </div>
             <div class="col-md-6">
-                <h1>{{ $products->productname }}</h1>
-                <span>{{ $products->productprice }}</span>
-                <p>Product Description</p>
+                <h2><strong>{{ $products->productname }}</strong></h2>
+                <span><b>price: </b>{{ $products->productprice }}</span>
+                <p><h3>Description</h3> <br> {{ $products->Description }}</p>
             </div>
         </div>
         <hr>
         <div class="row">
             <div class="col-md-8 box">
-                    <h1>FORM</h1>
-                    <form action="" method="post">
+                    <h1>Billing</h1>
+                    <form method="post">
                         @csrf
-                        <label for="plan">Select a plan:</label>
-                        <select id="plan" name="plan" onchange="calculatePayment()">
-                            <option value="Basic">Basic</option>
-                            <option value="standard">Standard</option>
-                            <option value="premium">Premium</option>
-                        </select>
-
-                        <input type="text" id="name" name="name" value=""
+                        <input type="text" id="name" name="name"
                             placeholder="Enter Your Full Name">
 
-                        <input type="text" id="address" name="address" value=""
-                            placeholder="Enter Your Complete Address">
+                        <input type="text" id="email" name="email"
+                            placeholder="Enter Your Email address">
 
-                        <input type="text" id="contact" name="contact" value=""
+                        <input type="text" id="contact" name="contact"
                             placeholder="Enter Your Contact Number">
 
-                        <select id="payment_method" name="payment_method" value="">
+                        <input type="text" id="contact" name="Pname" value="Product Name : {{ $products->productname }}"
+                            placeholder="Enter Your Contact Number" readonly>
+
+                        <input type="text" id="contact" name="Pprice" value="Product price : {{ $products->productprice }}"
+                            placeholder="Enter Your Contact Number" readonly>
+
+                        <select id="payment_method" name="payment_method" value="Banktransfer">
                             <option value="Banktransfer">Banktransfer</option>
                         </select>
-                        <label for="payment">Show Package payment:</label>
-                        <input type="text" name="pay" id="payment" readonly>
                         <input type="submit" class="btn btn-default" value="Go to Payment Process">
-
                     </form>
                 </div>
-            <div class="col-md-4">
+            <div class="col-md-4 order">
                         <h4><strong>Your Order</strong></h4>
                         <hr>
-                        <h5>Product Name <span>ABC</span></h5>
-                        <h5>Product Price <span>$45</span></h5>
+                        <h5>Product Name <span>{{ $products->productname }}</span></h5>
+                        <h5>Product Price <span>{{ $products->productprice }}</span></h5>
                         <h5>Delivery charger <span>$10</span></h5>
                         <hr>
                         <h5>Total <span>$55</span></h5>
@@ -55,6 +51,9 @@
     </div>
     </div>
     <style>
+        .order span{
+            float: right;
+        }
         .box {
             background-color: transparent;
             border-radius: 10px;

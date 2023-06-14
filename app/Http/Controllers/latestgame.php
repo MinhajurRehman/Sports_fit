@@ -19,6 +19,17 @@ class latestgame extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'img_1' => 'required',
+            'img_2' => 'required',
+            'team1title' => 'required',
+            'team1score' => 'required',
+            'matchtitle' => 'required',
+            'matchdate' => 'required',
+            'team2title' => 'required',
+            'team2score' => 'required',
+        ]);
+
         $img1 = $request->file('img_1')->GetClientOriginalName();
         $path = $request->file('img_1')->storeAs('/img_1', $img1);
         $img2 = $request->file('img_2')->GetClientOriginalName();

@@ -29,21 +29,14 @@ use App\Http\Controllers\upcomming;
 
 
 // Index Page
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [index::class, 'index']);
 
 // contact page
-Route::get('/contact', function () {
-    return view('contact');
-});
+Route::get('/contact', [index::class, 'contact']);
 
 // ticket page
-Route::get('/tickets', function () {
-    return view('Tickets');
-});
+Route::get('/tickets', [index::class, 'Tickets']);
 
-// Admin Login / Reg / Logout Routing
 Route::get('/Admins/Login', [AdminController::class, 'fetch']);
 Route::get('/Reg', [AdminController::class, 'Reg']);
 Route::post('/Reg', [AdminController::class, 'Registration']);
@@ -130,7 +123,12 @@ Route::get('/login', [Store::class, 'login']);
 Route::get('/Register', [Store::class, 'Register']);
 Route::post('/Register', [Store::class, 'Registration']);
 Route::post('login-store', [Store::class, 'loginstore'])->name('login-store');
-Route::get('/int', [Store::class, 'interface']);
-Route::get('', [Store::class, 'information']);
+Route::get('/int', [Store::class, 'interface'])->middleware('LogIn');
+Route::get('Y', [Store::class, 'information'])->middleware('LogIn');
 //Store Product fetch by id on inforamtion page from the help of this route
-Route::get('/info/Buy/{id}', [Store::class, 'Buy'])->name('store.Buy');
+Route::get('/info/Buy/{id}', [Store::class, 'Buy'])->middleware('LogIn')->name('store.Buy');
+Route::post('/info/Buy/{id}', [Store::class, 'storage']);
+
+
+Route::get('store/bill', [AdminController::class, 'review'])->middleware('isLogIn');
+Route::get('/Logout', [Store::class, 'Logout']);

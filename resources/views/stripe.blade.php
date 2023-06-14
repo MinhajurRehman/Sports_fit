@@ -47,9 +47,7 @@
                                 </div>
                             </div>
 
-                            <div class="mb-3" style="padding-top:20px;">
-                                <h5 class='total'>Total:<span class='amount'>$10</span></h5>
-                            </div>
+                          <br>
 
                             <div class="mb-3">
                                 <button class='form-control btn btn-success submit-button' type='submit'>Pay »</button>

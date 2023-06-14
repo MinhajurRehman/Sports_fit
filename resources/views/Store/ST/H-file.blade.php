@@ -73,6 +73,15 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
+                                <div class="search_box pull-right">
+                                <a href="{{ url('/Logout') }}">
+                                    <button class="btn btn-danger">
+                                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        logout
+                                    </button>
+                                </a>
+                                </div>
+
 								<div class="search_box pull-right">
                                     <input type="text" placeholder="Search"/>
                                 </div>
