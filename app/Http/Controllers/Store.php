@@ -183,7 +183,7 @@ class Store extends Controller
 
     return redirect('/stripe');
    }
-
+//  authentication login
       public function Logo()
     {
         if (Session::has('Basic')) {
