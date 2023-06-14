@@ -7,10 +7,10 @@
     <form action="{{ $url }}" method="post" enctype='multipart/form-data'>
         @csrf
         <label for="Event-image">Event Image</label>
-        <input type="file" id="img" name="img">
-        <input type="text" id="event-title" name="eventtitle" placeholder="Name of event title">
+        <input type="file" id="img" name="img" value="{{ $upcoming_events->img }}">
+        <input type="text" id="event-title" name="eventtitle" placeholder="Name of event title" value="{{ $upcoming_events->eventtitle }}">
         <label for="Event-date">Date of Event</label>
-        <input type="date" id="event-date" name="eventdate">
+        <input type="date" id="event-date" name="eventdate" value="{{ $upcoming_events->eventdate }}">
         <input type="submit" value="submit">
 
 

@@ -16,38 +16,35 @@
                         <div class="item active">
                             <div class="col-sm-6">
                                 <h1><span>SPORTS</span>-FIT</h1>
-                                <h2>Free E-Commerce Template</h2>
+                                <h2>100% Original Product</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                                 <button type="button" class="btn btn-default get">Get it now</button>
                             </div>
                             <div class="col-sm-6">
-                                <img src="Store/images/home/girl1.jpg" class="girl img-responsive" alt="" />
-                                <img src="Store/images/home/pricing.png"  class="pricing" alt="" />
+                                <img src="{{ url('images/result_2.jpg') }}" class="girl img-responsive" alt="" />
                             </div>
                         </div>
                         <div class="item">
                             <div class="col-sm-6">
                                 <h1><span>SPORTS</span>-FIT</h1>
-                                <h2>100% Responsive Design</h2>
+                                <h2>100% Original Product</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                                 <button type="button" class="btn btn-default get">Get it now</button>
                             </div>
                             <div class="col-sm-6">
-                                <img src="Store/images/home/girl2.jpg" class="girl img-responsive" alt="" />
-                                <img src="Store/images/home/pricing.png"  class="pricing" alt="" />
+                                <img src="{{ url('images/result_1.jpg') }}" class="girl img-responsive" alt="" />
                             </div>
                         </div>
 
                         <div class="item">
                             <div class="col-sm-6">
                                 <h1><span>SPORTS</span>-FIT</h1>
-                                <h2>Free Ecommerce Template</h2>
+                                <h2>100% Original Product</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                                 <button type="button" class="btn btn-default get">Get it now</button>
                             </div>
                             <div class="col-sm-6">
-                                <img src="Store/images/home/girl3.jpg" class="girl img-responsive" alt="" />
-                                <img src="Store/images/home/pricing.png" class="pricing" alt="" />
+                                <img src="{{ url('images/result_2.jpg') }}" class="girl img-responsive" alt="" />
                             </div>
                         </div>
 
@@ -183,13 +180,13 @@
                         <h2>Brands</h2>
                         <div class="brands-name">
                             <ul class="nav nav-pills nav-stacked">
-                                <li><a href="#"> <span class="pull-right">(50)</span>Acne</a></li>
-                                <li><a href="#"> <span class="pull-right">(56)</span>Grüne Erde</a></li>
-                                <li><a href="#"> <span class="pull-right">(27)</span>Albiro</a></li>
-                                <li><a href="#"> <span class="pull-right">(32)</span>Ronhill</a></li>
-                                <li><a href="#"> <span class="pull-right">(5)</span>Oddmolly</a></li>
-                                <li><a href="#"> <span class="pull-right">(9)</span>Boudestijn</a></li>
-                                <li><a href="#"> <span class="pull-right">(4)</span>Rösch creative culture</a></li>
+                                <li><a href="#"> <span class="pull-right">(50)</span>Niki</a></li>
+                                <li><a href="#"> <span class="pull-right">(56)</span>Adidas</a></li>
+                                <li><a href="#"> <span class="pull-right">(27)</span>Skechers</a></li>
+                                <li><a href="#"> <span class="pull-right">(32)</span>Rebook</a></li>
+                                <li><a href="#"> <span class="pull-right">(5)</span>HM</a></li>
+                                <li><a href="#"> <span class="pull-right">(9)</span>Walk</a></li>
+                                <li><a href="#"> <span class="pull-right">(4)</span>Bata</a></li>
                             </ul>
                         </div>
                     </div><!--/brands_products-->
@@ -239,11 +236,12 @@
                 <div class="category-tab"><!--category-tab-->
                     <div class="col-sm-12">
                         <ul class="nav nav-tabs">
-                            <li class="active"><a href="#tshirt" data-toggle="tab">T-Shirt</a></li>
-                            <li><a href="#blazers" data-toggle="tab">Blazers</a></li>
-                            <li><a href="#sunglass" data-toggle="tab">Sunglass</a></li>
-                            <li><a href="#kids" data-toggle="tab">Kids</a></li>
-                            <li><a href="#poloshirt" data-toggle="tab">Polo shirt</a></li>
+                            <li class="active"><a href="#tshirt" data-toggle="tab">Helmet</a></li>
+                            <li><a href="#blazers" data-toggle="tab">Bat</a></li>
+                            <li><a href="#sunglass" data-toggle="tab">Ball</a></li>
+                            <li><a href="#kids" data-toggle="tab">Pads</a></li>
+                            <li><a href="#poloshirt" data-toggle="tab">T-shirt</a></li>
+                            <li><a href="#poloshirt" data-toggle="tab">Printed T-shirt</a></li>
                         </ul>
                     </div>
                     <div class="tab-content">

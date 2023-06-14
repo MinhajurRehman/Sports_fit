@@ -131,4 +131,4 @@ Route::post('/info/Buy/{id}', [Store::class, 'storage']);
 
 
 Route::get('store/bill', [AdminController::class, 'review'])->middleware('isLogIn');
-Route::get('/Logout', [Store::class, 'Logout']);
+Route::get('/Logo', [Store::class, 'Logo']);

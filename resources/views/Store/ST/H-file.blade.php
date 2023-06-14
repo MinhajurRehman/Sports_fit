@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/x-icon" href="{{ url('Admins/images/logos.png') }}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Home | E-Shopper</title>
+    <title>Sports Fit | Store</title>
     <link href="{{ url('Store/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ url('Store/css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ url('Store/css/prettyPhoto.css') }}" rel="stylesheet">
@@ -13,8 +14,6 @@
     <link href="{{ url('Store/css/animate.css') }}" rel="stylesheet">
 	<link href="{{ url('Store/css/main.css') }}" rel="stylesheet">
 	<link href="{{ url('Store/css/responsive.css') }}" rel="stylesheet">
-
-    <link rel="shortcut icon" href="{{ url('images/ico/favicon.ico') }}">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ url('Store/images/ico/apple-touch-icon-144-precomposed.png') }}">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ url('Store/images/ico/apple-touch-icon-114-precomposed.png') }}">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ url('Store/images/ico/apple-touch-icon-72-precomposed.png') }}">
@@ -74,7 +73,7 @@
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
                                 <div class="search_box pull-right">
-                                <a href="{{ url('/Logout') }}">
+                                <a href="{{ url('/Logo') }}">
                                     <button class="btn btn-danger">
                                         <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                         logout
