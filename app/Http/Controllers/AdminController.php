@@ -91,7 +91,7 @@ class AdminController extends Controller
             return redirect('/Admins/Login');
         }
     }
-
+// billing database fetch 
     public function review()
     {
         $billing = new bill;
